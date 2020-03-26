@@ -1,0 +1,6 @@
+#Install specified python requirements
+- name: pip install -r requirements.txt
+  pip:
+     requirements: /home/fingers/fingers/requirements.txt
+     
+    

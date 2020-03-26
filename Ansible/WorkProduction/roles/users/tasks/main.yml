@@ -1,0 +1,54 @@
+---
+- name: MAIN USERS TASK
+  debug: msg="USERS tasks reading from {{env_name}}"
+ 
+ 
+- name: PING
+  ping:
+  register: result
+  
+- name: Update APT Cache
+  apt: update_cache=yes
+  when: result is success  
+  
+  
+  
+- name: install VirtualBox
+  apt: name=virtualbox
+  when: result is success 
+  
+- name: create directory
+  file:
+    path=/opt/genymotion
+    state=directory
+  when: result is success    
+
+- name: copy genymotion to /opt/genymotion
+  copy: src="/temp/genymotion-2.12.1-linux_x64.bin"  dest="/opt/genymotion/genymotion-2.12.1-linux_x64.bin"
+  when: result is success
+
+- name: chmod +x genymotion
+  file: path="/opt/genymotion/genymotion-2.12.1-linux_x64.bin" mode="+x"
+  when: result is success
+  
+- name: install genymotion
+  raw: "echo 'Y' | /opt/genymotion/genymotion-2.12.1-linux_x64.bin"
+  when: result is success
+      
+  
+  
+#  
+#- name: install packages
+#  apt: name={{ item }} state=present
+#  with_items:
+#    - virtualbox
+    
+
+#- include: install_ngnix.yml
+#- include: copy_code_to_server.yml
+#- include: restart_services.yml
+
+#- name: Ping
+#  ping:
+#  when: (flag == 'true') and (env_name == 'production')
+

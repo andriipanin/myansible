@@ -1,0 +1,12 @@
+---
+- name: MAIN WEB TASK
+  debug: msg="WEB server reading from {{env_name}}"
+
+- include: install_ngnix.yml
+- include: copy_code_to_server.yml
+- include: restart_services.yml
+
+#- name: Ping
+#  ping:
+#  when: (flag == 'true') and (env_name == 'production')
+

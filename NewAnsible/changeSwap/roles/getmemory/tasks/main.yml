@@ -1,0 +1,8 @@
+---
+# tasks file for getmemory
+- name: Get TOTAL MEMORY
+  debug: msg={{ansible_memtotal_mb}}
+  
+- name: Get PC model
+  debug: msg={{ansible_model}}  
+  

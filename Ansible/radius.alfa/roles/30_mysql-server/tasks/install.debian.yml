@@ -1,0 +1,35 @@
+---
+
+- name: Installing Pyhton MySQL modules
+  apt: name={{ item }}
+  with_items:
+     - python-mysqldb
+
+- name: Installing packahes
+  apt: name={{ item }}
+  with_items:
+    - mysql-server
+    - mysql-client
+    
+- name: Setting root password
+  mysql_user: name=root
+              password="{{ mysql_root_password }}"      
+              host="{{ item|lower }}"
+  with_items:
+    - "%"
+    - "127.0.0.1"
+    - "::1" 
+    - "{{ ansible_hostname }}"
+    - "localhost"
+    
+- name: create a new database with name 'radius'
+  mysql_db:
+     name: radius
+     state: present
+
+- name: create a MySQL user with password
+  mysql_user:
+     name: radius
+     password: 921701
+     priv: 'radius.*:ALL'
+     state: present          

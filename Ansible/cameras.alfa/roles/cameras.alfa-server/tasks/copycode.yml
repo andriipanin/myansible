@@ -1,0 +1,12 @@
+- name: copy cameras.alfa.tar.gz
+  copy:
+     src: cameras.alfa.tar.gz
+     dest: /home/cameras/cameras.alfa.tar.gz
+     
+- name: copy cameras.sql
+  copy:
+      src: cameras.sql
+      dest: /home/cameras/cameras.sql
+      
+       
+        

@@ -1,0 +1,303 @@
+TASK [users : Get Host] ***************************************************************************************************************************************************************************************************
+ok: [10.0.9.202] => {
+    "msg": "comp-2-001"
+}
+ok: [10.0.9.35] => {
+    "msg": "comp-2-002"
+}
+ok: [10.0.9.55] => {
+    "msg": "comp-2-007"
+}
+ok: [10.0.9.136] => {
+    "msg": "comp-2-011"
+}
+ok: [10.0.9.26] => {
+    "msg": "comp-2-016"
+}
+ok: [10.0.9.154] => {
+    "msg": "comp-2-024"
+}
+ok: [10.0.9.113] => {
+    "msg": "comp-2-025"
+}
+ok: [10.0.9.101] => {
+    "msg": "comp-2-027"
+}
+ok: [10.0.9.245] => {
+    "msg": "comp-2-029"
+}
+ok: [10.0.9.110] => {
+    "msg": "comp-2-028"
+}
+ok: [10.0.9.51] => {
+    "msg": "comp-2-034"
+}
+ok: [10.0.9.132] => {
+    "msg": "comp-2-036"
+}
+ok: [10.0.9.156] => {
+    "msg": "comp-2-042"
+}
+ok: [10.0.9.41] => {
+    "msg": "comp-2-043"
+}
+ok: [10.0.7.206] => {
+    "msg": "comp-2-066"
+}
+ok: [10.0.7.222] => {
+    "msg": "comp-2-071"
+}
+ok: [10.0.7.214] => {
+    "msg": "comp-2-072"
+}
+ok: [10.0.7.210] => {
+    "msg": "comp-2-073"
+}
+
+TASK [users : Get Memory] *************************************************************************************************************************************************************************************************
+changed: [10.0.9.202]
+changed: [10.0.9.26]
+changed: [10.0.9.154]
+changed: [10.0.9.136]
+changed: [10.0.9.55]
+changed: [10.0.9.35]
+changed: [10.0.9.113]
+changed: [10.0.9.101]
+changed: [10.0.9.245]
+changed: [10.0.9.132]
+changed: [10.0.9.51]
+changed: [10.0.9.156]
+changed: [10.0.9.41]
+changed: [10.0.7.206]
+changed: [10.0.7.214]
+changed: [10.0.7.222]
+changed: [10.0.7.210]
+changed: [10.0.9.110]
+
+TASK [users : Get Memory Type] ********************************************************************************************************************************************************************************************
+changed: [10.0.9.202]
+changed: [10.0.9.26]
+changed: [10.0.9.35]
+changed: [10.0.9.136]
+changed: [10.0.9.154]
+changed: [10.0.9.55]
+changed: [10.0.9.101]
+changed: [10.0.9.245]
+changed: [10.0.9.113]
+changed: [10.0.9.51]
+changed: [10.0.9.41]
+changed: [10.0.9.156]
+changed: [10.0.9.132]
+changed: [10.0.7.206]
+changed: [10.0.9.110]
+changed: [10.0.7.214]
+changed: [10.0.7.222]
+changed: [10.0.7.210]
+
+TASK [users : Get Memory Speed] *******************************************************************************************************************************************************************************************
+changed: [10.0.9.202]
+changed: [10.0.9.26]
+changed: [10.0.9.35]
+changed: [10.0.9.136]
+changed: [10.0.9.154]
+changed: [10.0.9.55]
+changed: [10.0.9.101]
+changed: [10.0.9.113]
+changed: [10.0.9.245]
+changed: [10.0.9.51]
+changed: [10.0.9.132]
+changed: [10.0.9.156]
+changed: [10.0.9.41]
+changed: [10.0.7.206]
+changed: [10.0.9.110]
+changed: [10.0.7.210]
+changed: [10.0.7.214]
+changed: [10.0.7.222]
+
+TASK [users : debug] ******************************************************************************************************************************************************************************************************
+ok: [10.0.9.202] => {
+    "msg": "Memory \u000312Memory\u0003"
+}
+ok: [10.0.9.35] => {
+    "msg": "Memory 1.77"
+}
+ok: [10.0.9.55] => {
+    "msg": "Memory 1380.9/2504.5MB"
+}
+ok: [10.0.9.136] => {
+    "msg": "Memory 1188.7/2000.6MB"
+}
+ok: [10.0.9.26] => {
+    "msg": "Memory 782.3/1754.7MB"
+}
+ok: [10.0.9.154] => {
+    "msg": "Memory \u000312Memory\u0003"
+}
+ok: [10.0.9.113] => {
+    "msg": "Memory 860.3/2000.6MB"
+}
+ok: [10.0.9.101] => {
+    "msg": "Memory 876.0/2000.6MB"
+}
+ok: [10.0.9.245] => {
+    "msg": "Memory 852.4/2000.6MB"
+}
+ok: [10.0.9.110] => {
+    "msg": "Memory 1.45"
+}
+ok: [10.0.9.51] => {
+    "msg": "Memory \u000312Memory\u0003"
+}
+ok: [10.0.9.132] => {
+    "msg": "Memory 1.77"
+}
+ok: [10.0.9.156] => {
+    "msg": "Memory 1.80"
+}
+ok: [10.0.9.41] => {
+    "msg": "Memory 732.4/1897.6MB"
+}
+ok: [10.0.7.206] => {
+    "msg": "Memory 1055.6/1820.3MB"
+}
+ok: [10.0.7.222] => {
+    "msg": "Memory 1.77"
+}
+ok: [10.0.7.214] => {
+    "msg": "Memory 1236.6/1753.3MB"
+}
+ok: [10.0.7.210] => {
+    "msg": "Memory 1100.8/1850.7MB"
+}
+
+TASK [users : debug] ******************************************************************************************************************************************************************************************************
+ok: [10.0.9.202] => {
+    "msg": "Type \tError Correction Type: None\n\tType: DDR3\n\tType: Unknown"
+}
+ok: [10.0.9.35] => {
+    "msg": "Type \tType: DIMM\n\tType: DIMM\n\tError Correction Type: None\n\tType: DDR3\n\tType: Unknown"
+}
+ok: [10.0.9.55] => {
+    "msg": "Type \tType: DIMM SDRAM\n\tType: DIMM SDRAM\n\tError Correction Type: None\n\tType: DDR2\n\tType: DDR2"
+}
+ok: [10.0.9.136] => {
+    "msg": "Type \tError Correction Type: None\n\tType: DDR2\n\tType: Unknown"
+}
+ok: [10.0.9.26] => {
+    "msg": "Type \tType: DIMM\n\tType: DIMM\n\tType: DIMM\n\tType: DIMM\n\tError Correction Type: None\n\tType: Unknown\n\tType: Unknown\n\tType: DDR3\n\tType: Unknown"
+}
+ok: [10.0.9.154] => {
+    "msg": "Type \tType: DIMM\n\tType: DIMM\n\tType: DIMM\n\tType: DIMM\n\tError Correction Type: None\n\tType: DDR3\n\tType: Unknown\n\tType: DDR3\n\tType: Unknown"
+}
+ok: [10.0.9.113] => {
+    "msg": "Type \tError Correction Type: None\n\tType: Unknown\n\tType: DDR2"
+}
+ok: [10.0.9.101] => {
+    "msg": "Type \tError Correction Type: None\n\tType: DDR2\n\tType: Unknown"
+}
+ok: [10.0.9.110] => {
+    "msg": "Type \tType: DIMM SDRAM\n\tType: DIMM SDRAM\n\tError Correction Type: None\n\tType: DDR2\n\tType: DDR2"
+}
+ok: [10.0.9.245] => {
+    "msg": "Type \tError Correction Type: None\n\tType: Unknown\n\tType: DDR2"
+}
+ok: [10.0.9.51] => {
+    "msg": "Type \tType: DIMM SDRAM\n\tType: DIMM SDRAM\n\tError Correction Type: None\n\tType: DDR2\n\tType: DDR2"
+}
+ok: [10.0.9.132] => {
+    "msg": "Type \tType: DIMM\n\tType: DIMM\n\tError Correction Type: None\n\tType: DDR3\n\tType: Unknown"
+}
+ok: [10.0.9.156] => {
+    "msg": "Type \tType: DIMM\n\tType: DIMM\n\tType: DIMM\n\tType: DIMM\n\tError Correction Type: None\n\tType: Unknown\n\tType: Unknown\n\tType: DDR3\n\tType: Unknown"
+}
+ok: [10.0.9.41] => {
+    "msg": "Type \tType: DIMM\n\tType: DIMM\n\tError Correction Type: None\n\tType: DDR3\n\tType: DDR3"
+}
+ok: [10.0.7.206] => {
+    "msg": "Type \tType: DIMM\n\tType: DIMM\n\tError Correction Type: None\n\tType: Unknown\n\tType: DDR3"
+}
+ok: [10.0.7.222] => {
+    "msg": "Type \tType: DIMM\n\tType: DIMM\n\tError Correction Type: None\n\tType: DDR3\n\tType: Unknown"
+}
+ok: [10.0.7.214] => {
+    "msg": "Type \tType: DIMM\n\tType: DIMM\n\tType: DIMM\n\tType: DIMM\n\tError Correction Type: None\n\tType: Unknown\n\tType: Unknown\n\tType: DDR3\n\tType: Unknown"
+}
+ok: [10.0.7.210] => {
+    "msg": "Type \tType: DIMM\n\tType: DIMM\n\tType: DIMM\n\tType: DIMM\n\tError Correction Type: None\n\tType: Unknown\n\tType: Unknown\n\tType: DDR3\n\tType: Unknown"
+}
+
+TASK [users : debug] ******************************************************************************************************************************************************************************************************
+ok: [10.0.9.202] => {
+    "msg": "Speed \tSpeed: 1600 MHz\n\tConfigured Clock Speed: 1600 MHz\n\tSpeed: Unknown\n\tConfigured Clock Speed: Unknown "
+}
+ok: [10.0.9.35] => {
+    "msg": "Speed \tSupported Speeds:\n\tCurrent Speed: Unknown\n\tCurrent Speed: Unknown\n\tSpeed: 1066 MT/s\n\tConfigured Clock Speed: 1067 MT/s\n\tSpeed: Unknown\n\tConfigured Clock Speed: Unknown "
+}
+ok: [10.0.9.55] => {
+    "msg": "Speed \tSupported Speeds:\n\tCurrent Speed: 30 ns\n\tCurrent Speed: 30 ns\n\tSpeed: 800 MHz\n\tSpeed: 800 MHz "
+}
+ok: [10.0.9.136] => {
+    "msg": "Speed \tSpeed: 667 MHz\n\tSpeed: Unknown "
+}
+ok: [10.0.9.26] => {
+    "msg": "Speed \tSupported Speeds:\n\tCurrent Speed: Unknown\n\tCurrent Speed: Unknown\n\tCurrent Speed: Unknown\n\tCurrent Speed: Unknown\n\tSpeed: Unknown\n\tConfigured Clock Speed: Unknown\n\tSpeed: Unknown\n\tConfigured Clock Speed: Unknown\n\tSpeed: 1600 MHz\n\tConfigured Clock Speed: 1600 MHz\n\tSpeed: Unknown\n\tConfigured Clock Speed: Unknown "
+}
+ok: [10.0.9.154] => {
+    "msg": "Speed \tSupported Speeds:\n\tCurrent Speed: Unknown\n\tCurrent Speed: Unknown\n\tCurrent Speed: Unknown\n\tCurrent Speed: Unknown\n\tSpeed: 1333 MHz\n\tConfigured Clock Speed: 1333 MHz\n\tSpeed: Unknown\n\tConfigured Clock Speed: Unknown\n\tSpeed: 1333 MHz\n\tConfigured Clock Speed: 1333 MHz\n\tSpeed: Unknown\n\tConfigured Clock Speed: Unknown "
+}
+ok: [10.0.9.113] => {
+    "msg": "Speed \tSpeed: Unknown\n\tSpeed: 667 MHz "
+}
+ok: [10.0.9.101] => {
+    "msg": "Speed \tSpeed: 667 MHz\n\tSpeed: Unknown "
+}
+ok: [10.0.9.245] => {
+    "msg": "Speed \tSpeed: Unknown\n\tSpeed: 667 MHz "
+}
+ok: [10.0.9.110] => {
+    "msg": "Speed \tSupported Speeds:\n\tCurrent Speed: 25 ns\n\tCurrent Speed: 25 ns\n\tSpeed: 800 MT/s\n\tSpeed: 800 MT/s "
+}
+ok: [10.0.9.51] => {
+    "msg": "Speed \tSupported Speeds:\n\tCurrent Speed: 25 ns\n\tCurrent Speed: 25 ns\n\tSpeed: 800 MHz\n\tSpeed: 800 MHz "
+}
+ok: [10.0.9.132] => {
+    "msg": "Speed \tSupported Speeds:\n\tCurrent Speed: Unknown\n\tCurrent Speed: Unknown\n\tSpeed: 1333 MT/s\n\tConfigured Clock Speed: 1333 MT/s\n\tSpeed: Unknown\n\tConfigured Clock Speed: Unknown "
+}
+ok: [10.0.9.156] => {
+    "msg": "Speed \tSupported Speeds:\n\tCurrent Speed: Unknown\n\tCurrent Speed: Unknown\n\tCurrent Speed: Unknown\n\tCurrent Speed: Unknown\n\tSpeed: Unknown\n\tConfigured Clock Speed: Unknown\n\tSpeed: Unknown\n\tConfigured Clock Speed: Unknown\n\tSpeed: 1333 MT/s\n\tConfigured Clock Speed: 1333 MT/s\n\tSpeed: Unknown\n\tConfigured Clock Speed: Unknown "
+}
+ok: [10.0.9.41] => {
+    "msg": "Speed \tSupported Speeds:\n\tCurrent Speed: Unknown\n\tCurrent Speed: Unknown\n\tSpeed: 1066 MHz\n\tConfigured Clock Speed: 1067 MHz\n\tSpeed: 1066 MHz\n\tConfigured Clock Speed: 1067 MHz "
+}
+ok: [10.0.7.206] => {
+    "msg": "Speed \tSupported Speeds:\n\tCurrent Speed: Unknown\n\tCurrent Speed: Unknown\n\tSpeed: Unknown\n\tConfigured Clock Speed: Unknown\n\tSpeed: 1066 MHz\n\tConfigured Clock Speed: 1067 MHz "
+}
+ok: [10.0.7.222] => {
+    "msg": "Speed \tSupported Speeds:\n\tCurrent Speed: Unknown\n\tCurrent Speed: Unknown\n\tSpeed: 1333 MT/s\n\tConfigured Clock Speed: 1333 MT/s\n\tSpeed: Unknown\n\tConfigured Clock Speed: Unknown "
+}
+ok: [10.0.7.214] => {
+    "msg": "Speed \tSupported Speeds:\n\tCurrent Speed: Unknown\n\tCurrent Speed: Unknown\n\tCurrent Speed: Unknown\n\tCurrent Speed: Unknown\n\tSpeed: Unknown\n\tConfigured Clock Speed: Unknown\n\tSpeed: Unknown\n\tConfigured Clock Speed: Unknown\n\tSpeed: 1600 MHz\n\tConfigured Clock Speed: 1600 MHz\n\tSpeed: Unknown\n\tConfigured Clock Speed: Unknown "
+}
+ok: [10.0.7.210] => {
+    "msg": "Speed \tSupported Speeds:\n\tCurrent Speed: Unknown\n\tCurrent Speed: Unknown\n\tCurrent Speed: Unknown\n\tCurrent Speed: Unknown\n\tSpeed: Unknown\n\tConfigured Clock Speed: Unknown\n\tSpeed: Unknown\n\tConfigured Clock Speed: Unknown\n\tSpeed: 1066 MHz\n\tConfigured Clock Speed: 1067 MHz\n\tSpeed: Unknown\n\tConfigured Clock Speed: Unknown "
+}
+
+PLAY RECAP ****************************************************************************************************************************************************************************************************************
+10.0.7.206                 : ok=8    changed=3    unreachable=0    failed=0   
+10.0.7.210                 : ok=8    changed=3    unreachable=0    failed=0   
+10.0.7.214                 : ok=8    changed=3    unreachable=0    failed=0   
+10.0.7.222                 : ok=8    changed=3    unreachable=0    failed=0   
+10.0.9.101                 : ok=8    changed=3    unreachable=0    failed=0   
+10.0.9.110                 : ok=8    changed=3    unreachable=0    failed=0   
+10.0.9.113                 : ok=8    changed=3    unreachable=0    failed=0   
+10.0.9.132                 : ok=8    changed=3    unreachable=0    failed=0   
+10.0.9.136                 : ok=8    changed=3    unreachable=0    failed=0   
+10.0.9.154                 : ok=8    changed=3    unreachable=0    failed=0   
+10.0.9.156                 : ok=8    changed=3    unreachable=0    failed=0   
+10.0.9.202                 : ok=8    changed=3    unreachable=0    failed=0   
+10.0.9.245                 : ok=8    changed=3    unreachable=0    failed=0   
+10.0.9.26                  : ok=8    changed=3    unreachable=0    failed=0   
+10.0.9.35                  : ok=8    changed=3    unreachable=0    failed=0   
+10.0.9.41                  : ok=8    changed=3    unreachable=0    failed=0   
+10.0.9.51                  : ok=8    changed=3    unreachable=0    failed=0   
+10.0.9.55                  : ok=8    changed=3    unreachable=0    failed=0   

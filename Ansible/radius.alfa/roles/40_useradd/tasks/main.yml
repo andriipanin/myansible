@@ -1,0 +1,10 @@
+---
+# tasks file for createuser
+- name: useradd radius
+  user:
+     name: radius
+     shell: /bin/bash
+     home: /home/radius
+     password: "{{ user_password }}"
+  tags:
+     - useradd     

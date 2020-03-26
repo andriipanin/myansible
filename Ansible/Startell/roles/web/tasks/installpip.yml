@@ -1,0 +1,4 @@
+- name: easy_install pip
+  easy_install:
+    name: pip
+    state: latest

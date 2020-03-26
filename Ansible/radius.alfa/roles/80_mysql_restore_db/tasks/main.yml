@@ -1,0 +1,7 @@
+---
+# tasks file for 80_mysql_restore_db
+- name: mysql radius < radius.sql
+  shell: mysql radius < radius.sql
+  args:
+     chdir: /home/radius/
+     

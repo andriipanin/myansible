@@ -1,0 +1,21 @@
+https://linuxmint.com.ru/viewtopic.php?t=3147
+
+1. Отключим его sudo swapoff /swapfile
+2. Изменим его размер sudo fallocate -l 6G /swapfile (вместо 6G подставить нужное знаечение). Эта команда создает файл /swapfile, т.е. старый файл будет перезаписан, либо будет создан новый если его не было.
+3. Проверим права на файле ls -lh /swapfile. Должно быть
+КОД: ВЫДЕЛИТЬ ВСЁ
+
+-rw------- 1 root root 6,0G июн 28 12:12 /swapfile
+
+Если иначе то
+КОД: ВЫДЕЛИТЬ ВСЁ
+
+sudo chown root:root /swapfile
+sudo chmod 0600 /swapfile
+И снова проверить, а то мало ли.
+4. Создать swap-простарнство sudo mkswap /swapfile
+5. Включаем swap sudo swapon /swapfile.
+6. Ну и на всякий случай проверим cat /etc/fstab. Сточка со swap должна выгядеть так
+КОД: ВЫДЕЛИТЬ ВСЁ
+
+/swapfile                                 none            swap    sw              0       0

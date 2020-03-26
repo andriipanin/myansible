@@ -1,0 +1,10 @@
+[all:vars]
+#ansible_user=ivanov
+#ansible_sudo_pass=1qaz2wsx
+
+[server]
+#localhost   ansible_connection=local
+
+#10.0.9.117  ansible_user=ivanov asible_sudo_pass=1qaz2wsx
+10.0.9.117
+

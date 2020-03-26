@@ -1,0 +1,18 @@
+export ANSIBLE_HOST_KEY_CHECKING=False
+
+-c paramiko
+https://stackoverflow.com/questions/42835626/to-use-the-ssh-connection-type-with-passwords-you-must-install-the-sshpass-pr
+
+
+
+
+
+- name: Install mailutils postfix for sending emails (provide sendmail in php, mail in console)
+  apt: pkg={{ item }} update_cache=yes
+  with_items:
+    - mailutils
+    - postfix
+
+- name: Listen only on local interface
+  lineinfile: dest=/etc/postfix/main.cf regexp='^inet_interfaces' line='inet_interfaces = 127.0.0.1'
+  notify: restart postfix

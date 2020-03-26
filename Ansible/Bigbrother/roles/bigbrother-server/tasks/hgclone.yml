@@ -1,0 +1,5 @@
+- name: hg clone https://Lex512@bitbucket.org/Lex512/fingers
+  hg:
+    repo: https://Lex512:Alexander101@bitbucket.org/Lex512/fingers
+    dest: /home/fingers/fingers
+    

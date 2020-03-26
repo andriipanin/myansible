@@ -1,0 +1,19 @@
+- name: Install Django 1.8.4
+  pip: name=django version=1.8.4 state=present
+#  pip: name=django version=1.11.4 state=present
+  
+- name: pip install django-bootstap3
+  pip:
+   name: django-bootstrap3
+   
+- name: pip install netifaces
+  pip:
+   name: netifaces
+   
+- name: pip install logger
+  pip:
+    name: logger
+          
+      
+    
+  

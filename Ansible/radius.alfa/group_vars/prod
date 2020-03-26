@@ -1,0 +1,15 @@
+---
+
+### Hostname
+hostname_name: "radius_prod"
+
+### SELinux
+disable-selinux_enabled: false
+
+
+### common-packages
+
+##user_password: enterme
+user_password: $6$Lo.YSlViQ6.pKW$IFgyH5U5ggf6VhHf3Pi4VCYcFva5ZN6oDUTksbHPRXXwiBAjNBa62jIx0wL.UQeJPFfTvQyyyYq0nzWcMMIAM/
+
+

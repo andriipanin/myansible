@@ -1,0 +1,4 @@
+
+
+ansible-playbook -i staging --ask-pass vnc-view.yml
+ansible-playbook -i production --ask-pass vnc-view.yml

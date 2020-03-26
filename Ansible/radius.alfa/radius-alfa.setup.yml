@@ -1,0 +1,30 @@
+---
+
+- hosts: radius-server
+  vars:
+  pre_tasks:
+      - name: Updating yum cache
+        yum:
+           name: "*"
+           update_cache: yes
+        when: ansible_os_family == "RedHat"
+        
+      - name: Updating apt-cache
+        apt:
+           name: "*"
+           update_cache: yes
+        when: ansible_os_family == "Debian"
+  roles:
+      - role: 10_hostname
+      - role: 20_disable-selinux
+        when: (ansible_os_family == "RedHat"  and disable-selinux_enabled)
+      - role: 25_common_packages
+      - role: 30_mysql-server
+      - role: 40_useradd
+      - role: 60_copycode
+#      - role: 70_untar_radius.alfa
+#      - role: 80_mysql_restore_db
+#      - role: 90_install_pip
+#      - role: 91_installdjango
+#      - role: 92_copyapacheconf
+      - role: 93_freeradius

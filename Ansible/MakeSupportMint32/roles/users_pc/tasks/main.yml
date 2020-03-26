@@ -1,0 +1,167 @@
+---
+- name: MAIN USERS TASK
+  debug: msg="USERS tasks reading from {{env_name}}"
+ 
+ 
+#- name: PING
+#  ping:
+#  register: result
+
+#OK  
+- name: Change root password
+  become: true
+  user:
+    name: root
+    password: "$6$0TXpB1cU$.zq8gR60f8lwuoqwflevQ00Ake1XrKFDeo9A.27s6xf28n01/afnC45qTPfpiKFX78.fhSA05lFAD1O6Ojyg./"
+    update_password: always
+
+
+#OK
+- name: Create support user
+  user:
+    name: support
+    password: "$6$S.bwjUsr$02dDKiNF1TmJbbiMAgNmVH5LETUYj0w2jYpzLYXbeOK.6Y9fGpq0ceBaPuw8LRgHf.T7ukphKx2YiIEVcOMNx."
+    createhome: yes
+    home: /home/support
+    state: present
+
+
+##==============Ok
+##Install Google Chrome http://help.ubuntu.ru/wiki/google_chrome
+- name: Load Google Chrome repository key
+  shell: "wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -"
+  
+- name: Add the Google repository
+  #shell: "sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'"
+  apt_repository: repo="deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" state="present"
+  
+- name: Apt Update
+  apt: update_cache=yes
+  
+- name: install google-chrome-stable
+  apt: name=google-chrome-stable
+#===============================================  
+
+
+##DONT UNCOMMENT Install Telegram
+#- name: Add Telegram repository
+#  become: true
+#  apt_repository: repo="ppa:atareao/telegram" state="present"
+#  apt_repository: repo="deb http://deb.debian.org/debian/ stretch-backports main" state="present"
+#  shell: "sudo add-apt-repository ppa:atareao/telegram"
+  
+#- name: apt-get update
+#  apt: update_cache=yes
+  
+#- name: install Telegram
+#  apt: name=telegram-desktop
+
+
+#============== OK install Telegram 
+
+- name: install snap for Telegram
+  apt: name=snapd
+  
+- name: install Telegram via  snap
+  shell: "snap install telegram-desktop"
+#=======================================   
+
+
+#Install mc vlc browser-plugin-vlc motion x11vnc
+#OK
+- name: install mc
+  apt: name=mc
+  
+- name: install vlc
+  apt: name=vlc
+  
+- name: install browser-plugin-vlc
+  apt: name=browser-plugin-vlc
+  
+- name: install motion
+  apt: name=motion
+  
+- name: install x11vnc
+  apt: name=x11vnc
+  
+
+
+#-----------------------------OK
+#mkdir /root/.vnc
+- name: mkdir /root/.vnc 
+  file:
+    path: /root/.vnc
+    state: directory
+    #owner: root
+    #group: root
+    #mode: 0775
+
+- name: create /root/.vnc/passwd
+  shell: "echo bKdfqplEvm4= | base64 -d > /root/.vnc/passwd"
+#----------------------------------------------------------
+
+
+
+#---------------------------OK-------------------------
+- name: copy code to server
+  debug: msg="copy config files to server. reading from {{env_name}}"
+
+- name: Copy rc.conf file
+  template:
+      src: rc.local.j2
+      dest: /etc/rc.local
+      mode: 0755 
+  
+- name: Copy motion.conf
+  template:
+      src: motion.conf.j2
+      dest: /etc/motion/motion.conf
+      backup: yes
+
+
+- name: Copy /etc/default/motion
+  template:
+      src: motion.j2
+      dest: /etc/default/motion
+      backup: yes        
+
+- name: Copy clean_week.sh
+  template:
+      src: clean_week.sh.j2
+      dest: /home/ivanov/.config/clean_week.sh
+      mode: 0755
+      
+- name: Copy clean_media.sh
+  template:
+      src: clean_media.sh.j2
+      dest: /home/ivanov/.config/clean_media.sh            
+      mode: 0755
+
+- name: Copy sshd_config
+  template:
+      src: sshd_config.j2
+      dest: /etc/ssh/sshd_config
+      
+- name: add clean_media.sh to cron
+  cron:
+    user: ivanov
+    minute: 0
+    job: /home/ivanov/.config/clean_media.sh      
+    
+- name: add clean_week.sh to cron
+  cron:
+    user: ivanov
+    weekday: 3
+    minute: 0
+    hour: 12
+    job: /home/ivanov/.config/clean_week.sh
+            
+
+    
+#------------------
+- name: Restart PC
+  command: /sbin/reboot
+  async: 0
+  poll: 0
+  ignore_errors: true
+  

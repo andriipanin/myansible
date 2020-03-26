@@ -1,0 +1,10 @@
+---
+# tasks file for disable-selinux
+
+- name: Disableng SELinux
+  selinux:
+     state: disabled
+  tags:
+    - disable_selinux
+       
+          

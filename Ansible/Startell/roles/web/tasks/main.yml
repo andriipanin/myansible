@@ -1,0 +1,97 @@
+---
+- name: MAIN USERS TASK
+  debug: msg="USERS tasks reading from {{env_name}}"
+
+- name: apt-get update
+  apt: update_cache=yes
+
+
+#OK
+- name: apt-get install list of packages sudo, mc, htop, apache2, python-setuptools, mercurial, git, libapache2-mod-wsgi
+  apt:  name={{item}} state=present
+  with_items:
+    - sudo
+    - mc
+    - htop
+    - apache2
+    - python-setuptools
+    - mercurial
+    - git
+    - libapache2-mod-wsgi
+
+
+#add user startell to system
+- include: useradd.yml
+   
+
+- include: mysqlserver.yml
+
+
+- include: installpip.yml
+
+- include: installdjango.yml
+
+#copy source from hg bitbucket 
+- include: hgclone.yml
+
+# make requirements
+- include: pipinstreq.yml
+
+
+- include: django_manage.yml
+
+
+- include: copyapacheconf.yml
+
+# add startell to www-data group
+- name: add startell to www-data group
+  user: 
+    name: startell
+    groups: www-data
+    
+- name: chown startell startell -R /home/startell
+  shell: chown startell:startell -R /home/startell
+  
+- name: Restart service apache2, in all cases
+  service:
+    name: apache2
+    state: restarted  
+
+- name: 
+  debug: msg="DONT forget top edit settings.py ALLOWED_HOST[] section and apache2 000-default.conf ServerName"
+
+
+
+#MYSQL Server install
+#- name: Set MySQL root password before installing
+#  debconf: name='mysql-server' question='mysql-server/root_password' value='{{mysql_root_pass | quote}}' vtype='password'
+    
+ 
+#- name: Confirm MySQL root password before installing
+#  debconf: name='mysql-server' question='mysql-server/root_password_again' value='{{mysql_root_pass | quote}}' vtype='password'
+
+#- name: install mysql
+#  apt: package={{ item }} state=present
+#  when: ansible_os_family == 'Debian' 
+#  with_items:
+#    - mysql-server
+##    - mysql-client
+#    - python-mysqldb
+
+    
+
+#- name: Update MySQL root password for all root accounts
+#  mysql_user: name=root host={{ item }} password={{ mysql_root_pass }} state=present
+#     - "{{ ansible_hostname }}"
+#     - 127.0.0.1
+#     - ::1
+#     - localhost
+
+
+
+#- name: Start the MySQL service
+#  service:
+#    name: mysql
+#    state: started
+#    enabled: true
+

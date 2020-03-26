@@ -1,0 +1,17 @@
+
+PLAY [all] ************************************************************************************************************************************************************************
+
+TASK [Gathering Facts] ************************************************************************************************************************************************************
+ok: [10.0.12.72]
+
+TASK [users : Get Free Space] *****************************************************************************************************************************************************
+changed: [10.0.12.72]
+
+TASK [users : debug] **************************************************************************************************************************************************************
+ok: [10.0.12.72] => {
+    "msg": "# dmidecode 3.0\nGetting SMBIOS data from sysfs.\nSMBIOS 2.7 present.\n\nHandle 0x0005, DMI type 5, 20 bytes\nMemory Controller Information\n\tError Detecting Method: None\n\tError Correcting Capabilities:\n\t\tNone\n\tSupported Interleave: One-way Interleave\n\tCurrent Interleave: One-way Interleave\n\tMaximum Memory Module Size: 8192 MB\n\tMaximum Total Memory Size: 16384 MB\n\tSupported Speeds:\n\t\tOther\n\tSupported Memory Types:\n\t\tOther\n\tMemory Module Voltage: Unknown\n\tAssociated Memory Slots: 2\n\t\t0x0006\n\t\t0x0007\n\tEnabled Error Correcting Capabilities:\n\t\tNone\n\nHandle 0x0006, DMI type 6, 12 bytes\nMemory Module Information\n\tSocket Designation: JDIMM1\n\tBank Connections: None\n\tCurrent Speed: Unknown\n\tType: DIMM\n\tInstalled Size: Not Installed\n\tEnabled Size: Not Installed\n\tError Status: OK\n\nHandle 0x0007, DMI type 6, 12 bytes\nMemory Module Information\n\tSocket Designation: JDIMM2\n\tBank Connections: None\n\tCurrent Speed: Unknown\n\tType: DIMM\n\tInstalled Size: 2048 MB (Single-bank Connection)\n\tEnabled Size: 2048 MB (Single-bank Connection)\n\tError Status: OK\n\nHandle 0x0023, DMI type 16, 23 bytes\nPhysical Memory Array\n\tLocation: System Board Or Motherboard\n\tUse: System Memory\n\tError Correction Type: None\n\tMaximum Capacity: 16 GB\n\tError Information Handle: 0x0027\n\tNumber Of Devices: 2\n\nHandle 0x0024, DMI type 17, 34 bytes\nMemory Device\n\tArray Handle: 0x0023\n\tError Information Handle: Not Provided\n\tTotal Width: Unknown\n\tData Width: Unknown\n\tSize: No Module Installed\n\tForm Factor: DIMM\n\tSet: None\n\tLocator: JDIMM1\n\tBank Locator: Not Specified\n\tType: Unknown\n\tType Detail: Unknown\n\tSpeed: Unknown\n\tManufacturer: Empty\n\tSerial Number: Empty\n\tAsset Tag: Unknown\n\tPart Number: Empty\n\tRank: Unknown\n\tConfigured Clock Speed: Unknown\n\nHandle 0x0025, DMI type 17, 34 bytes\nMemory Device\n\tArray Handle: 0x0023\n\tError Information Handle: 0x0026\n\tTotal Width: 64 bits\n\tData Width: 64 bits\n\tSize: 2048 MB\n\tForm Factor: SODIMM\n\tSet: None\n\tLocator: JDIMM2\n\tBank Locator: Not Specified\n\tType: DDR3\n\tType Detail: Synchronous\n\tSpeed: 1600 MHz\n\tManufacturer: Unknown\n\tSerial Number: 45714241\n\tAsset Tag: Unknown\n\tPart Number: 76.A305G.C4D0B    \n\tRank: 1\n\tConfigured Clock Speed: 1600 MHz"
+}
+
+PLAY RECAP ************************************************************************************************************************************************************************
+10.0.12.72                 : ok=3    changed=1    unreachable=0    failed=0   
+

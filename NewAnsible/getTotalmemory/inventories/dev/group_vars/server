@@ -1,0 +1,2 @@
+main_env: test
+ansible_ssh_pass: 1qaz2wsx

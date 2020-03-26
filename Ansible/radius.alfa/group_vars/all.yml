@@ -1,0 +1,17 @@
+---
+
+## Hostname
+
+
+## disable-selinux
+common_packages:
+ - sudo
+ - mc
+ - htop
+ - apache2
+ - python-setuptools
+ - mercurial
+ - git
+ - libapache2-mod-wsgi
+ - net-tools 
+ 

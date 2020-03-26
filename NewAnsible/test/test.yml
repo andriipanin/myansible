@@ -1,0 +1,13 @@
+---
+- hosts: all
+  gather_facts: yes
+  tasks:
+#    - name: debug1
+#      debug: msg="Hello1"
+#    - name: debug2
+#      debug: msg="Hello2"
+    - name: Get Host
+      debug: msg={{ansible_hostname}}
+        
+      
+    

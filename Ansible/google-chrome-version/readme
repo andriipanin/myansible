@@ -1,0 +1,5 @@
+ansible-playbook -i staging -u ivanov --ask-pass test.yml --ssh-common-args='-o StrictHostKeyChecking=no' -e 'host_key_checking=False'
+
+nmap -sn 10.0.12.0/24 > 12.txt
+
+

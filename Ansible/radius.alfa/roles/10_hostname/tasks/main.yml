@@ -1,0 +1,7 @@
+---
+# tasks file for hostname
+- name: Updateing hostname
+  hostname: name={{ hostname_name }}
+  tags: [ hostname ]
+  
+  

@@ -1,0 +1,10 @@
+https://natenka.gitbooks.io/ansible-dlya-setevih-inzhenerov/content/book/1_ansible_basics/configuration.html
+---------------
+
+ansible pc-vlan14 -i myhosts -m ping -u ivanov --ask-pass
+ansible pc-vlan15 -i myhosts -m ping -u ivanov --ask-pass
+
+ansible all -i myhosts -m ping -u ivanov --ask-pass
+
+
+---------

@@ -1,0 +1,195 @@
+ansible-playbook -i staging -u root --ask-pass cameras.yml
+
+
+1  ip a
+    2  apt-get update
+    3  nano /etc/ssh/sshd_config 
+    4  /etc/init.d/ssh restart
+    5  apt-get install tmux mc htop
+    6  exit
+    7  cd /root/
+    8  mkdir .ssh
+    9  mcedit .ssh/authorized_keys
+   10  exit
+   11  ÑÐ·Ðµ-Ð¿Ñ
+   12  apt-get update
+   13  apt-get install mercurial python-dev
+   14  apt-get install mysql-server
+   15  apt-get install python-setuptools
+   16  easy_install pip
+   17  pip install Django==1.9.0
+   18  apt-get install mysql-python
+   19  su cameras 
+   20  mc
+   21  su cameras 
+   22  apt-get install python-mysqldb
+   23  su cameras 
+   24  apt-get install apache2 libapache2-mod-wsgi
+   25  pss apache2
+   26  mc
+   27  cd zagotovka/
+   28  cp 000-default.conf /etc/apache2/sites-available/000-default.conf 
+   29  mcedit /etc/apache2/sites-available/000-default.conf 
+   30  cd /home/cameras/cameras/
+   31  mv -R Cameras/ cameras
+   32  mv Cameras/ cameras
+   33  rm .DS_Store 
+   34  cp /root/zagotovka/wsgi.py /home/cameras/cameras/cameras/wsgi.py
+   35  mcedit /etc/apache2/sites-available/000-default.conf 
+   36  /etc/init.d/apache2 reload
+   37  tail -f /var/log/apache2/cameras-error.log 
+   38  su cameras 
+   39  /etc/init.d/apache2 reload
+   40  tail -f /var/log/apache2/cameras-error.log 
+   41  su cameras
+   42  /etc/init.d/apache2 reload
+   43  su cameras
+   44  cd /home/cameras/
+   45  ls -al 
+   46  cd cameras/
+   47  ls -la 
+   48  cd .hg
+   49  cat hgrc 
+   50  ssh root@batman -p 20202
+   51  mc
+   52  cd /home/cameras/cameras/
+   53  hg status
+   54  mc
+   55  hg status
+   56  mc
+   57  hg pull https://bitbucket.org/EnemyRoad/code/src/d96a8141852972ff2fe127ba73324199855863ee/Cameras/?at=default
+   58  hg pull https://bitbucket.org/EnemyRoad/code/src/d96a8141852972ff2fe127ba73324199855863ee/Cameras
+   59  hg update
+   60  mc
+   61  hg update
+   62  hg update -y
+   63  mc
+   64  cd ..
+   65  hg pull
+   66  hg pull https://bitbucket.org/EnemyRoad/code/src/d96a8141852972ff2fe127ba73324199855863ee/cameras/
+   67  cd cameras/
+   68  hg pull https://bitbucket.org/EnemyRoad/code/src/d96a8141852972ff2fe127ba73324199855863ee/cameras/
+   69  hg update -y
+   70  mc
+   71  hg status
+   72  mc
+   73  hg status
+   74  hg pull
+   75  mc
+   76  hg pull
+   77  mc
+   78  hg status
+   79  hg pull https://bitbucket.org/brat_ii/cameras
+   80  mc
+   81  hg update
+   82  mc
+   83  hg log
+   84  hg update -r 11
+   85  hg status -r 11
+   86  hg diff -r 14:11
+   87  hg status
+   88  hg log
+   89  mcedit .hg/hgrc
+   90  hg status
+   91  mcedit .hg/hgrc
+   92  hg status
+   93  mc
+   94  hg pull https://bitbucket.org/brat_ii/cameras/src/954a1c324789092d02c7d07af5d6630422df3e6c/Cameras/ /home/cameras/cameras/
+   95  hg pull https://bitbucket.org/brat_ii/cameras/src/954a1c324789092d02c7d07af5d6630422df3e6c/Cameras/
+   96  hg log
+   97  mc
+   98  hg update
+   99  mc
+  100  hg pull
+  101  mc
+  102  hg pull https://brat_ii@bitbucket.org/brat_ii/cameras
+  103  hg log
+  104  hg rollback
+  105  hg log
+  106  hg pull https://brat_ii@bitbucket.org/brat_ii/cameras
+  107  hg update
+  108  hg log
+  109  hg parent
+  110  hg lig
+  111  hg log
+  112  hg log -P
+  113  hg merge
+  114  mc
+  115  hg pull
+  116  mc
+  117  hg pull
+  118  mc
+  119  hg pull
+  120  hg rollback
+  121  hg rollback -l 13
+  122  hg rollback -n 13
+  123  hg rollback
+  124  hg pull
+  125  mc
+  126  hg pull
+  127  mc
+  128  hg pull
+  129  sudo cameras
+  130  su cameras
+  131  mc
+  132  su cameras
+  133  ls -l
+  134  ls -s
+  135  ls 
+  136  ls -n
+  137  sudo cameras
+  138  su cameras
+  139  apt-get install subversion
+  140  svn co --username='msushko' --password='budLeSwec' svn://84.95.250.100/smscoin/api/web
+  141  su cameras
+  142  cat /etc/apache2/sites-enabled/000-default.conf 
+  143  cat /home/cameras/cameras/cameras/wsgi.py
+  144  ÑÑ
+  145  cat /home/cameras/cameras/cameras/settings.py
+  146  mc
+  147  cat /etc/apache2/sites-available/000-default.conf 
+  148  mc
+  149  cd /home/cameras/cameras
+  150  hg log
+  151  hg branch
+  152  hg pull -u brat_ii
+  153  hg pull -U brat_ii
+  154  hg pull
+  155  hg pull -b new-release
+  156  mc
+  157  hg branch
+  158  mc
+  159  hg pull
+  160  mc
+  161  hg pull
+  162  hg pull && hg update new-release https://brat_ii@bitbucket.org/brat_ii/cameras
+  163  su cameras
+  164  cd /home/cameras/camerases/
+  165  cd camera/
+  166  cd cameras/
+  167  cd cameras
+  168  cd cameras/../
+  169  cd ..
+  170  cd cameras_reboot/
+  171  cat views.py
+  172  ip a
+  173  htop
+  174  poweroff
+  175  ip a
+  176  htop
+  177  cd /etc/apache2/sites-enabled/
+  178  ls -al
+  179  cat 000-default.conf 
+  180  mcedit 000-default.conf 
+  181  powerodd
+  182  poweroff
+  183  ip a
+  184  mount 
+  185  reboot
+  186  cat /etc/apache2/sites-enabled/000-default.conf 
+  187  mc
+  188  ifconfig
+  189  mc
+  190  mysql
+  191  mysql -u root -p
+  192  history

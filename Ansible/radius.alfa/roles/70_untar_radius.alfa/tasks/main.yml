@@ -1,0 +1,16 @@
+---
+# tasks file for 70_untar_radius.alfa
+
+#- name: Extract radius.alfa.tar.gz Django src code
+#  unarchive:
+#     src: radius.alfa.tar.gz
+#     dest: /tmp
+#  tags: [ untar ]
+
+- name: tar -zxvf radius.alfa.tar.gz
+  shell: tar -zxvf /home/radius/radius.alfa.tar.gz
+  args:
+      chdir: /home/radius/
+        
+
+       

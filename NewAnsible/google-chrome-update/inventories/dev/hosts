@@ -1,0 +1,8 @@
+#inventory file for dev
+[all:vars]
+#ansible_sudo_pass=1qaz2wsx
+
+
+[servers]
+10.0.12.164
+

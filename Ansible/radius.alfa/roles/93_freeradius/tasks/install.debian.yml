@@ -1,0 +1,45 @@
+---
+
+- name: Installing freeradius
+  apt: name={{ item }}
+  with_items:
+     - freeradius
+#     - freeradius-utils
+#     - freeradius-mysql
+
+- name: copy sql module
+  copy:
+    src: sql
+    dest: /etc/freeradius/3.0/
+
+
+
+
+#- name: Installing packahes
+#  apt: name={{ item }}
+#  with_items:
+#    - mysql-server
+#    - mysql-client
+#    
+#- name: Setting root password
+#  mysql_user: name=root
+#              password="{{ mysql_root_password }}"      
+#              host="{{ item|lower }}"
+#  with_items:
+#    - "%"
+#    - "127.0.0.1"
+#    - "::1" 
+#    - "{{ ansible_hostname }}"
+#   - "localhost"
+    
+#- name: create a new database with name 'radius'
+#  mysql_db:
+#     name: radius
+#     state: present
+
+#- name: create a MySQL user with password
+#  mysql_user:
+#     name: radius
+#     password: 921701
+#     priv: 'radius.*:ALL'
+#     state: present          

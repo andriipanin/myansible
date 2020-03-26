@@ -1,0 +1,3 @@
+
+/home/ivanov/.config/clean_week.sh
+0 * * * * /home/ivanov/.config/clean_media.sh

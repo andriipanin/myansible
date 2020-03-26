@@ -1,0 +1,6 @@
+- name: useradd cameras
+  user:
+    name: cameras
+    shell: /bin/bash
+    home: /home/cameras
+    password: "{{ user_password }}"

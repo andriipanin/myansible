@@ -1,0 +1,4 @@
+- name: git clone https://Lex512@bitbucket.org/brat_ii/vnc.git
+  git:
+    repo: https://Lex512:Alexander101@bitbucket.org/brat_ii/vnc.git
+    dest: /home/vnc/vnc

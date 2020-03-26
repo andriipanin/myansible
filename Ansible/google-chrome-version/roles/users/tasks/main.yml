@@ -1,0 +1,16 @@
+---
+#- name: Get IP
+#  debug: msg={{ansible_default_ipv4}}
+  
+- name: Get Host
+  debug: msg={{ansible_hostname}}  
+  
+- name: google-chrome --version
+  command: google-chrome --version
+  register: gchrome
+  
+- debug: msg="{{ gchrome.stdout }}"   
+  
+  
+  
+  

@@ -1,0 +1,5 @@
+---
+# tasks file for mysql-server
+- include: install.{{ ansible_os_family|lower }}.yml
+  tags: 
+    -  freeradius

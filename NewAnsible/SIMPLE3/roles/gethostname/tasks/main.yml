@@ -1,0 +1,15 @@
+---
+# tasks file for gethostname
+- name: Vault String
+  debug: msg={{message}}
+  
+#- name: Get Main env
+#  debug: msg={{main_env}}
+
+#- name: Get env from group_vars
+#  debug: msg={{env_name}}
+
+- name: Get Host Name
+  debug: msg={{ansible_hostname}}
+  
+  

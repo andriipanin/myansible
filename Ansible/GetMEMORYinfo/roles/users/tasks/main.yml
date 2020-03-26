@@ -1,0 +1,36 @@
+---
+#- name: Get IP
+#  debug: msg={{ansible_default_ipv4}}
+
+- name: Get Host
+  debug: msg={{ansible_hostname}}
+
+- name: Get Memory
+  shell: inxi -I | grep "Memory" | awk {'print $8'}
+  register: result1 
+  
+- name: Get Memory Type
+  shell: dmidecode -t memory | grep "Type:"
+  register: result2
+  
+- name: Get Memory Speed
+  shell: dmidecode -t memory | grep "Speed"
+  register: result3  
+  
+  
+- name: 
+  debug: msg="Memory {{ result1.stdout }}"
+  
+- name:
+  debug: msg="Type {{ result2.stdout }}"
+  
+- name:
+  debug: msg="Speed {{ result3.stdout }} "  
+    
+  
+  
+  
+  
+  
+  
+  

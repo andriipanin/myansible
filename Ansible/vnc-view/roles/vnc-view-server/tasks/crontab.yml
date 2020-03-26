@@ -1,0 +1,7 @@
+#*/5 * * * *  /usr/bin/python /home/vnc/vnc/manage.py status > /var/log/cron.log
+- name: add crontab job
+  cron:
+    name: "manage.p status"
+    minute: "*/5"
+    job: "/usr/bin/python /home/vnc/vnc/manage.py status > /var/log/cron.log"
+    

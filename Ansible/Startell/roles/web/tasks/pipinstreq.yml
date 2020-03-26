@@ -1,0 +1,4 @@
+# Install specified python requirements.
+- name: pip install -r requirements.txt
+  pip:
+     requirements: /home/startell/startell/requirements.txt

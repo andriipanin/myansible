@@ -1,0 +1,8 @@
+[all:vars]
+ansible_user=ivanov
+ansible_sudo_pass=1qaz2wsx
+
+#List hosts
+[server]
+10.0.10.190
+

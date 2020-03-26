@@ -1,0 +1,56 @@
+command
+
+	ansible-playbook -i staging test.yml
+	ansible-playbook -i production test.yml
+
+
+flag=true - выполняем команду из task
+ansible-playbook -i production test.yml --extra-vars="mailflag=true"
+
+
+
+
+
+Необходимо заменить файл конфигурации nginx чтоб работал php
+
+server {
+    listen   [::]:80;
+    server_name  example.com; # Replace this with your own
+    root   /var/www/example.com;
+    index  index.html index.htm index.php;
+    access_log  /var/www/logs/example.com.access.log;  
+
+    location ~ \.php$ {
+        try_files $uri =404;
+        fastcgi_pass   unix:/tmp/php.socket;
+        fastcgi_index  index.php;
+        fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+        include fastcgi_params;
+    }   
+}
+
+
+
+
+ВОТ ТАК
+
+        location ~ \.php$ {
+                include snippets/fastcgi-php.conf;
+        #
+        #       # With php7.0-cgi alone:
+        #       fastcgi_pass 127.0.0.1:9000;
+        #       # With php7.0-fpm:
+                fastcgi_pass unix:/run/php/php7.0-fpm.sock;
+        }
+
+
+
+
+mail
+
+https://schoudhury.com/blog/articles/send-email-using-gmail-from-php-with-fsockopen/
+
+
+
+
+http://geekyplatypus.com/dockerise-your-php-application-with-nginx-and-php7-fpm/

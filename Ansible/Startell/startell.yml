@@ -1,0 +1,19 @@
+---
+- hosts: all
+  gather_facts: True
+  #
+  #become: yes
+  #sudo: yes
+
+  pre_tasks:
+    - debug: msg="reading from {{env_name}}"
+
+
+  roles:
+      - web
+    # - webserver
+    # - mailserver
+
+  post_tasks:
+   - debug: msg="All done {{env_name}}"
+   

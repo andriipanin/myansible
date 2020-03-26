@@ -1,0 +1,10 @@
+
+
+ansible-playbook -i staging --ask-pass startell.yml
+ansible-playbook -i production --ask-pass startell.yml
+
+cert-bot
+https!!!
+
+
+

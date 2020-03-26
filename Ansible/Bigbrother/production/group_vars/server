@@ -1,0 +1,11 @@
+env_name:staging
+mysql_root_pass: 921701
+
+django_default_user_name: root
+django_default_user_password: enterme
+
+#mkpasswd --method=sha-512 (enterme)
+#user fingers
+user_password: $6$Lo.YSlViQ6.pKW$IFgyH5U5ggf6VhHf3Pi4VCYcFva5ZN6oDUTksbHPRXXwiBAjNBa62jIx0wL.UQeJPFfTvQyyyYq0nzWcMMIAM/
+
+

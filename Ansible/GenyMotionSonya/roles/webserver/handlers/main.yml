@@ -1,0 +1,11 @@
+---
+# Handler for the webtier: handlers are called by other plays.
+# See http://docs.ansible.com/playbooks_intro.html for more information about handlers.
+
+- name: start nginx
+
+
+#- name: http service state
+#  service: name=httpd state=started enabled=yes
+
+  service: name=nginx state=started enabled=yes

@@ -1,0 +1,16 @@
+
+
+
+mysqldump -uroot -p921701 fingers > fingers.sql
+
+
+change apache2.conf section
+ServerName
+
+change /home/fingers/fingers/setting.py
+ALLOWED_HOST [] yuo need
+
+
+
+
+ansible-playbook -i staging -u root --ask-pass bigbrother.yml

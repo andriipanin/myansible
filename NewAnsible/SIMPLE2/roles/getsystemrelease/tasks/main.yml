@@ -1,0 +1,5 @@
+---
+# tasks file for getsystemrelease
+- name: Get Host
+  debug: msg={{ansible_distribution_release}}
+  

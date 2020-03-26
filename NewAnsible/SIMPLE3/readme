@@ -1,0 +1,12 @@
+
+
+ansible vault
+https://otus.ru/nest/post/232/
+https://rtfm.co.ua/ansible-ispolzovanie-vault-zashifrovannogo-xranilishha/#i-8
+
+
+ansible-vault create secrets.yml
+
+message: secret_message
+ansible_sudo_pass: mysudopass
+

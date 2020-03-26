@@ -1,0 +1,44 @@
+---
+- name: DEBUG MSG
+  debug: msg="install ngnix reading from {{env_name}}"
+
+- name: Update apt cache
+  apt: update_cache=yes
+
+- name: Install nginx
+  apt: name=nginx
+
+
+- name: Install php
+  apt: name=php
+  
+
+- name: Install sudo apt-get install php-fpm
+  apt: name=php-fpm
+
+#- name: Install nginx
+#  apt: name=nginx
+
+
+#- name: INstall
+#  apt: name=htop
+
+#- name: Install nginx
+#  apt: name=nginx
+
+#- name: Install php
+#  apt: name=php7.0
+
+
+#apt install php7.0-cgi
+#
+
+
+
+#- name: nginx service state
+#  service: name=nginx state=started enabled=yes
+
+
+
+
+

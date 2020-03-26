@@ -1,0 +1,6 @@
+secrets:
+  production:
+     mysql_root_password: "prod"
+  staging:
+     mysql_root_password: "stage"
+     

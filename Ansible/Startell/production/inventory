@@ -1,0 +1,12 @@
+[all:vars]
+#ansible_sudo_pass=1qaz2wsx
+
+[server]
+#localhost   ansible_connection=local
+#10.0.7.105
+
+
+
+
+
+

@@ -1,0 +1,7 @@
+- name: useradd fingers
+  user:
+    name: fingers
+    shell: /bin/bash
+    home: /home/fingers
+    password: "{{ user_password }}"
+    

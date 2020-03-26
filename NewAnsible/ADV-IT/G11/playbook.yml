@@ -1,0 +1,25 @@
+---
+- name: My Playbook
+  hosts: all
+  become: yes
+  
+  
+  vars:
+     messgae1: Privet
+     message2: World
+     secret: asasasasaxsdsfds
+     
+  tasks:
+     - name: Print Secret variable
+       debug:
+          var: secret
+    
+    
+     - debug: 
+         msg: "Secret is {{ secret }}"
+          
+     - shell: uptime
+       register: results
+       
+     - debug:
+         msg: "uptimr is {{ results.stdout }}"            

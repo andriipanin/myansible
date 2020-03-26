@@ -1,0 +1,45 @@
+---
+- name: MAIN TASK
+  debug: msg="TASK reading from {{env_name}}"
+  
+  
+- name: apt-get update
+  apt:
+    update_cache: yes 
+    
+- name: apt-get install sudo, mc, htop, apache2, python-setuptools, mercurial, git, libapache2-mod-wsgi ,net-tools
+  apt: name={{item}} state=present
+  with_items:
+       - sudo
+       - mc
+       - htop
+       - apache2
+       - python-setuptools
+       - mercurial
+       - git
+       - libapache2-mod-wsgi
+       - net-tools
+
+#add user cameras to the system
+- include: useradd.yml
+
+#install mysql server
+- include: mysqlserver.yml
+
+#install pip
+- include: installpip.yml
+
+#install django
+- include: installdjango.yml
+
+#copy src code and sql 
+- include: copycode.yml
+
+
+- include: untar.yml
+
+- include: copyapachconf.yml
+
+
+
+    

@@ -1,0 +1,12 @@
+---
+- name: DEBUG MSG
+  debug: msg="Restart nginx {env_name}}"
+
+- name: nginx service state restarted
+  service: name=nginx state=restarted
+
+- name: php service state restart
+  service: name=php7.0-fpm state=started
+
+
+

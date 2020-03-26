@@ -1,0 +1,1 @@
+ansible-playbook change-root-password.yml -k

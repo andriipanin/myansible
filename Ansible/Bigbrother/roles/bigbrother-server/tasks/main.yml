@@ -1,0 +1,57 @@
+---
+- name: MAIN TASK
+  debug: msg="USERS task reading from {{env_name}}"
+
+#OK  
+- name: apt-get update
+  apt:
+    update_cache: yes
+
+#ok    
+- name: apt-get install sudo, mc, htop, apache2, python-setuptools, mercurial, git, libapache2-mod-wsgi ,net-tools
+  apt: name={{item}} state=present
+  with_items:
+       - sudo
+       - mc
+       - htop
+       - apache2
+       - python-setuptools
+       - mercurial
+       - git
+       - libapache2-mod-wsgi
+       - net-tools
+
+
+#OK
+#add user fingers to the system
+- include: useradd.yml
+
+#install mysql server
+- include: mysqlserver.yml
+
+#ok
+- include: installpip.yml
+
+#ok
+- include: installdjango.yml
+
+#OK
+- include: hgclone.yml
+
+# OK make requirements
+- include: pipinstreq.yml
+
+#NEED REPLACE 127.0.0.1
+- include: djangomanage.yml
+
+#ok
+- include: copyapachconf.yml
+
+#Ok
+- include: crontab.yml
+
+
+
+
+
+

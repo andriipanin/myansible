@@ -1,0 +1,14 @@
+---
+# tasks file for gethostname
+#- name: Get vars
+#  debug: msg={{var1}}
+  
+- name: Get Main env
+  debug: msg={{main_env}}
+
+- name: Get env from group_vars
+  debug: msg={{env_name}}
+
+- name: Get Host
+  debug: msg={{ansible_hostname}}
+  

@@ -1,0 +1,18 @@
+---
+- hosts: all
+  gather_facts: True
+  #
+  #become: yes
+  #sudo: yes
+
+  pre_tasks:
+    - debug: msg="reading from {{env_name}}"
+
+
+  roles:
+      - bigbrother-server
+    
+
+  post_tasks:
+   - debug: msg="All done {{env_name}}"
+   

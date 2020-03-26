@@ -1,0 +1,29 @@
+<VirtualHost *:80>
+
+    ServerName {{ ansible_hostname }}
+#    ServerAlias monitor.pichalka.alfa
+    DocumentRoot /home/radius/radius/radius/
+    WSGIScriptAlias / /home/radius/radius/radius/wsgi.py
+#    Alias media /home/smb_mon/media/
+    Alias /static/  /home/radius/radius/static/
+
+    WSGIDaemonProcess apache2 user=www-data processes=2 threads=25  display-name=fingers
+    WSGIProcessGroup %{GLOBAL}
+
+    <Directory /home/radius/radius/*>
+    Options Indexes FollowSymLinks
+    AllowOverride None
+    Require all granted
+    </Directory>
+
+    <Directory /home/radius/radius/static/*>
+    Options Indexes FollowSymLinks
+    AllowOverride None
+    Require all granted
+    </Directory>
+
+
+     ErrorLog "/var/log/apache2/radius-error.log"
+     CustomLog "/var/log/apache2/radius-access.log" combined
+
+</VirtualHost>

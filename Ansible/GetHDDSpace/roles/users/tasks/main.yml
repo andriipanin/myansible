@@ -1,0 +1,17 @@
+---
+#- name: Get IP
+#  debug: msg={{ansible_default_ipv4}}
+  
+- name: Get Free Space
+  shell: df -h | grep "/dev/sda1" | awk {'print $4'}
+  register: result
+  
+- name: 
+  debug: msg="{{ result.stdout }}"
+  
+  
+  
+  
+  
+  
+  

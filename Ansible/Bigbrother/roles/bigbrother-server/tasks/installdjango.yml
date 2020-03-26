@@ -1,0 +1,63 @@
+- name: Install Django 1.8.1
+  pip: name=django version=1.8.1 state=present
+  
+- name: pip install PyMySQL
+  pip: 
+    name: PyMySQL
+    state: present
+    
+- name: pip install django-annoying
+  pip:
+    name: django-annoying
+    state: present    
+
+# !!!
+- name: pip install django-annoying
+  pip:
+    name: django-annoying
+    state: present
+
+- name: pip install logger
+  pip:
+    name: logger
+    state: present
+
+- name: pip install telegram
+  pip:
+    name: telegram
+    state: present
+    
+- name: pip install telegram-bot
+  pip:
+    name: telegram-bot
+    state: present
+        
+ 
+- name: pip install python-telegram-bot==10.1.0
+  pip:
+    name: python-telegram-bot
+    version: 10.1.0
+    state: present
+        
+    
+#   21  pip install PyMySQL
+#   23  pip install djnago-annoying
+
+#   24  pip install annoing-decorators
+
+#   25  pip install django-annoying 
+#   50  pip install logger
+#   71  pip install -r requirements.txt 
+#   85  pip install Django==1.8.1
+#  138  pip install telegram
+#  142  pip install telegram-bot
+#  144  pip install python-telegram-bot==4.0rc1
+#  146  pip install python-telegram-bot==6.1.0
+#  150  pip install python-telegram-bot==6.1.0
+#  155  pip install python-telegram-bot==6.1.0
+#  159  pip install python-telegram-bot
+#  160  pip install python-telegram-bot --upgrade
+#  164  pip install telegram
+#  165  pip install requirements
+#  339  history | grep pip install
+#  340  history | grep "pip install"

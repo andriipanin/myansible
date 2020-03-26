@@ -1,0 +1,13 @@
+- name: python manage.py migrate (django_manage ansible module)
+  django_manage:
+     command: migrate
+     app_path: "/home/vnc/vnc"
+     
+ 
+# OK 
+- name: Createsuperuser by shell
+  shell: echo "from django.contrib.auth.models import User; User.objects.create_superuser('{{ django_default_user_name }}', '{{ django_default_user_email }}', '{{ django_default_user_password }}')" | ./manage.py shell
+  args:
+      chdir: /home/vnc/vnc 
+
+     

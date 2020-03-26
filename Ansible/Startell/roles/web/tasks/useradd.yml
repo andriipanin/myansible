@@ -1,0 +1,9 @@
+- name: useradd startell
+  user:
+    name: startell
+    shell: /bin/bash
+    home: /home/startell
+    #mkpasswd --method=sha-512
+    #password: $6$Lo.YSlViQ6.pKW$IFgyH5U5ggf6VhHf3Pi4VCYcFva5ZN6oDUTksbHPRXXwiBAjNBa62jIx0wL.UQeJPFfTvQyyyYq0nzWcMMIAM/
+    password: "{{ user_password }}"
+    

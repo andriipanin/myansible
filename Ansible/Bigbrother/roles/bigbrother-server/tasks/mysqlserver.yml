@@ -1,0 +1,39 @@
+- name: install mysql
+  apt: package={{item}} state=present
+  when: ansible_os_family == 'Debian'
+  with_items:
+    - mysql-server
+    - python-mysqldb
+
+- name: create a new database with name 'fingers'
+  mysql_db:
+    name: fingers
+    state: present
+
+#- name: change root pass
+#  mysql_user:
+#     login_user: root;
+#     check_implicit_admin: yes
+#     name: root
+#     password: 921701
+#     priv= *.*:ALL,GRANT
+#     host: {{ item }}
+#  with_items:
+#       - 127.0.0.1
+#       - ::1
+#       - localhost     
+     #login_unix_socket: /var/run/mysqld/mysqld.sock     
+#- name: Change root user password on first run
+#  mysql_user: login_user=root login_password=921701 check_implicit_admin=yes name=root password= 91701 priv='*.*:ALL,GRANT'  host= {{ item }}
+#  with_items:
+#      - 127.0.0.1
+#      - ::1
+#      - localhost
+
+- name: Create a MySQL user vnc with password
+  mysql_user:
+    name: fingers
+    password: fingers
+    priv: '*.*:ALL' 
+    state: present
+ 

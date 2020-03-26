@@ -1,0 +1,9 @@
+- name: copy apache2.conf
+  template:
+     src: apache2.conf.j2
+     dest: /etc/apache2/apache2.conf
+     
+- name: copy 000-default.conf
+  template:
+     src: 000-default.conf.j2
+     dest: /etc/apache2/sites-available/000-default.conf

@@ -1,0 +1,9 @@
+[all:vars]
+ansible_sudo_pass=1qaz2wsx
+#ansible_python_interpreter=/usr/bin/python3
+
+[server]
+#localhost   ansible_connection=local
+10.0.7.176
+10.0.7.210
+10.0.7.234

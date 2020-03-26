@@ -1,0 +1,33 @@
+---
+#- name: Get IP
+#  debug: msg={{ansible_default_ipv4}}
+  
+- name: Get Host
+  debug: msg={{ansible_hostname}}  
+
+- name: rfkill block bluetooth
+  shell: rfkill block bluetooth
+  
+- name: Transfer and execite a script
+  template:
+      src: test.sh.j2
+      dest: /home/ivanov/test.sh
+      mode: 0777
+
+- name: Execute the script
+  command: sh /home/ivanov/test.sh
+  
+#- name: apt-get update
+#  apt:
+#    update_cache: yes
+  
+  
+#- name: apt-key add
+#  shell: rm -rf /etc/apt/sources.list.d/go* && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
+
+#- name: apt-get upgrade
+#  shell: sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list' && apt-get update && apt-get --only-upgrade install google-chrome-stable  
+  
+  
+  
+  

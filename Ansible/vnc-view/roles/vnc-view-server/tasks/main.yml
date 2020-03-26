@@ -1,0 +1,86 @@
+---
+- name: MAIN TASK
+  debug: msg="USERS task reading from {{env_name}}"
+  
+#OK  
+- name: apt-get update
+  apt:
+    update_cache: yes
+    
+#OK
+- name: apt-get install sudo, mc, htop, apache2, python-setuptools, mercurial, git, libapache2-mod-wsgi
+  apt: name={{item}} state=present
+  with_items:
+       - sudo
+       - mc
+       - htop
+       - apache2
+       - python-setuptools
+       - mercurial
+       - git
+       - libapache2-mod-wsgi
+
+#OK
+# add user vnc to the system
+- include: useradd.yml
+             
+
+#OK             
+# install mysql server
+- include: mysqlserver.yml
+
+#ok
+# install pip
+- include: installpip.yml
+
+#OK
+# install django
+- include: installdjango.yml
+
+#OK
+#copy app from git
+- include: gitclone.yml
+
+#OK
+- include: django_manage.yml
+
+#OK
+- include: copyapacheconf.yml
+
+
+#change Logic in FUTUTE
+- include: copymysqldata.yml
+
+
+#OK
+#add user vnc to www-data group
+- name: add user vnc to www-data group
+  user:
+    name: vnc
+    groups: www-data
+    
+    
+- name: chown vnc vnc -R /home/vnc
+  shell: chown vnc:vnc -R /home/vnc
+  
+- name: restart apache2
+  service:
+     name: apache2
+     state: restarted
+
+
+# add Crontab job */5 * * * *  /usr/bin/python /home/vnc/vnc/manage.py status > /var/log/cron.log
+- include: crontab.yml
+
+
+- name:
+  debug: msg="DONT forget edit  ServerName in apache2.conf 000-defualt.conf "
+     
+             
+
+
+
+
+
+
+     

@@ -1,0 +1,14 @@
+---
+# tasks file for copycode
+- name: copy radius.alfa.tar.gz
+  copy:
+     src: radius.alfa.tar.gz
+     dest: /home/radius/radius.alfa.tar.gz 
+  tags:
+    - copycode     
+
+- name: copy radius.sql
+  copy:
+     src: radius.sql
+     dest: /home/radius/radius.sql
+  tags: [ copycode ]

@@ -1,0 +1,22 @@
+---
+- hosts: all
+  gather_facts: yes
+  become: yes 
+  vars_files:
+   - secret.yml
+  tasks:
+#    - name: debug1
+#      debug: msg="Hello1"
+#    - name: debug2
+#      debug: msg="Hello2"
+    - name: Get Host
+      debug: msg={{ansible_hostname}}
+    - name: Upgrade all packages to the latest version
+      apt:
+        name: "*"
+        state: latest
+          
+      
+        
+      
+    

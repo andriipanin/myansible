@@ -1,0 +1,6 @@
+- name: hg clone https://Lex512@bitbucket.org/brat_ii/startells.net
+  hg:
+    repo: https://Lex512:Alexander101@bitbucket.org/brat_ii/startells.net
+    dest: /home/startell/startell
+    
+    

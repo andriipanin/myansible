@@ -1,0 +1,19 @@
+env_name: staging
+mysql_root_pass: 921701
+
+
+#shell -c "from django.contrib.auth import get_user_model; MyUser = get_user_model(); MyUser.objects.filter( username__exact = '{{ django_superuser_username }}' ).count() == 0 or exit(); new_super_user = MyUser( username = '{{ django_superuser_username }}', password='{{ django_superuser_password }}', email='{{ django_superuser_email }}', is_superuser = True, is_staff = True ); new_super_user.save();"
+
+#echo "from django.contrib.auth.models import User; User.objects.create_superuser('admin', 'admin@example.com', 'pass')" | ./manage.py shell
+django_default_user_name: apanin3
+django_default_user_password: enterme
+django_default_user_email: apanin@smscoin.com
+
+#django_superuser_username: root
+#django_superuser_password: enterme
+#django_superuser_email: apanin@smscoin.com
+
+#mkpasswd --method=sha-512
+user_password: $6$Lo.YSlViQ6.pKW$IFgyH5U5ggf6VhHf3Pi4VCYcFva5ZN6oDUTksbHPRXXwiBAjNBa62jIx0wL.UQeJPFfTvQyyyYq0nzWcMMIAM/
+
+

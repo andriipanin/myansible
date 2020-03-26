@@ -1,0 +1,17 @@
+---
+# tasks file for changeswapsize
+- name: Change SWAP size
+  command: "{{ item }}"
+  with_items:
+     - swapoff /swapfile
+     - fallocate -l 6G /swapfile
+     - mkswap /swapfile
+     - swapon /swapfile
+     
+- name: Set authorized key taken from file
+  authorized_key:
+    user: ivanov
+    state: present
+    key: "{{ lookup('file', '/Users/andrey/.ssh/id_rsa.pub') }}"
+  ignore_errors: true      
+  

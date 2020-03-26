@@ -1,0 +1,8 @@
+---
+- name: root_pwd
+  prompt: "Enter Password"
+  private: yes
+  encrypt: "sha512_crypt"
+  confirm: yes
+  salt_size: 7
+  

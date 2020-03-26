@@ -1,0 +1,325 @@
+root@bigBrother:/home# history
+    1  cd /home
+    2  ps -ax | grep apache
+    3  hg clone https://Lex512@bitbucket.org/Lex512/fingers
+    4  tmux
+    5  tmux at
+    6  tail -f /var/log/apache2/access.log 
+    7  tail -f /var/log/apache2/fingers-access.log 
+    8  exit
+    9  tail -f /var/log/apache2/fingers-access.log 
+   10  exit
+   11  tmux at
+   12  cd ..
+   13  cd .. 
+   14  python manage.py migrate
+   15  mysql -u root -p
+   16  python manage.py migrate
+   17  mcedit /usr/lib/python2.7/dist-packages/MySQLdb/cursors.py 
+   18  python manage.py migrate
+   19  python manage.py createsuperuser
+   20  python manage.py runserver 0.0.0.0:8000
+   21  pip install PyMySQL
+   22  python manage.py runserver 0.0.0.0:8000
+   23  pip install djnago-annoying
+   24  pip install annoing-decorators
+   25  pip install django-annoying 
+   26  python manage.py runserver 0.0.0.0:8000
+   27  ls -al 
+   28  cd fingers/
+   29  ls -al 
+   30  cat wsgi.py
+   31  mcedit /etc/apache2/sites-enabled/000-default.conf 
+   32  apt-get install libapache-modwsgi
+   33  apt-get install libapache-mod-wsgi
+   34  aptitude search libapache-mod
+   35  apt-get install libapache2-mod-wsgi 
+   36  mcedit /etc/apache2/sites-enabled/000-default.conf 
+   37  apache2ctl configtest
+   38  apache2ctl graseful
+   39  apache2ctl graceful
+   40  tail -f /var/log/apache2/fingers-access.log 
+   41  tail -f /var/log/apache2/fingers-error.log 
+   42  mcedit /etc/apache2/apache2.conf 
+   43  /etc/init.d/apache2 status
+   44  a2enmod
+   45  /etc/init.d/apache2 restart
+   46  tail -f /var/log/apache2/fingers-error.log 
+   47  mcedit settings.py
+   48  cd .. 
+   49  python manage.py get_mssql_data --days=60 --device=6 --dep-id=53
+   50  pip install logger
+   51  python manage.py get_mssql_data --days=60 --device=6 --dep-id=53
+   52  python manage.py get_mssql_data --days=59 --device=6 --dep-id=53
+   53  python manage.py get_mssql_data --days=58 --device=6 --dep-id=53
+   54  python manage.py get_mssql_data --days=57 --device=6 --dep-id=53
+   55  python manage.py get_mssql_data --days=56 --device=6 --dep-id=53
+   56  python manage.py get_mssql_data --days=55 --device=6 --dep-id=53
+   57  python manage.py get_mssql_data --days=54 --device=6 --dep-id=53
+   58  date
+   59  python manage.py get_mssql_data --days=30 --device=6 --dep-id=53
+   60  python manage.py get_mssql_data --days=60 --device=6 --dep-id=47
+   61  python manage.py get_mssql_data --days=60 --device=5 --dep-id=47
+   62  histoy
+   63  history
+   64  OB
+   65  htop
+   66  exit
+   67  ls -al 
+   68  cd fingers
+   69  ls -al 
+   70  easy_install pip
+   71  pip install -r requirements.txt 
+   72  hg branch
+   73  hg branch server_do_NOT_COMMIT
+   74  hg update server_do_NOT_COMMIT 
+   75  hg branch
+   76  ll
+   77  ls -al 
+   78  cd fingers/
+   79  ls -al 
+   80  cat settings.py 
+   81  mcedit settings.py 
+   82  cd .. 
+   83  ls -al 
+   84  python
+   85  pip install Django==1.8.1
+   86  python manage.py --help
+   87  apt-get install mysql-python
+   88  apt-get install python-mysqldb
+   89  python manage.py help
+   90  python manage.py migrate
+   91  host startells.net
+   92  host startels.net
+   93  python manage.py get_mssql_data --days=60 --device=5 --dep-id=47
+   94  exit
+   95  cd fingers/
+   96   python manage.py get_mssql_data --days=60 --device=6 --dep-id=55
+   97   python manage.py get_mssql_data --days=60 --device=6 --dep-id=57
+   98  exit
+   99   python manage.py get_mssql_data --days=60 --device=5 --dep-id=55
+  100  cd fingers/
+  101   python manage.py get_mssql_data --days=60 --device=5 --dep-id=55
+  102   python manage.py get_mssql_data --days=60 --device=5 --dep-id=63
+  103  exit
+  104  cd fingers/
+  105   python manage.py get_mssql_data --days=60 --device=5 --dep-id=47
+  106  exit
+  107  history
+  108  tmux at
+  109  tmux at
+  110  cd /home/fingers/
+  111  python manage.py help
+  112  ip a
+  113  locale
+  114  export LC_ALL="en_US.UTF-8"
+  115  export LC_CTYPE="en_US.UTF-8"
+  116  /etc/init.d/apache2 restart
+  117  ip a
+  118  mcedit /etc/network/interfaces
+  119  /etc/init.d/networking restart
+  120  ip a
+  121  ip a
+  122  mcedit /etc/network/interfaces
+  123  /etc/init.d/networking restart
+  124  ip a
+  125  ping 91.201.240.129
+  126   locale
+  127  dpkg-reconfigure locales 
+  128   locale
+  129  whereis locale
+  130  mcedit /etc/locale.alias 
+  131  dpkg-reconfigure locales 
+  132  /etc/init.d/apache2 restart
+  133  ip a
+  134  tmux at
+  135  cd fingers/
+  136  ls -al 
+  137  python manage.py bot_get_messages
+  138  pip install telegram
+  139  python manage.py bot_get_messages
+  140  python manage.py bot_get_messages
+  141  python manage.py bot_get_messages
+  142  pip install telegram-bot
+  143  python manage.py bot_get_messages
+  144  pip install python-telegram-bot==4.0rc1
+  145  python manage.py bot_get_messages
+  146  pip install python-telegram-bot==6.1.0
+  147  python manage.py bot_get_messages
+  148  pip deinstall telegram
+  149  pip uninstall telegram
+  150  pip install python-telegram-bot==6.1.0
+  151  pip uninstall telegram
+  152  python manage.py bot_get_messages
+  153  pip uninstall python-telegram-bot
+  154  python manage.py bot_get_messages
+  155  pip install python-telegram-bot==6.1.0
+  156  pip uninstall python-telegram-bot
+  157  python manage.py bot_get_messages
+  158  python manage.py bot_get_messages
+  159  pip install python-telegram-bot
+  160  pip install python-telegram-bot --upgrade
+  161  python manage.py bot_get_message
+  162  python manage.py bot_get_messages
+  163  python 
+  164  pip install telegram
+  165  pip install requirements
+  166  python manage.py bot_get_messages
+  167  python manage.py tabel --help
+  168  python manage.py tabel
+  169  cat requirements.txt 
+  170  python manage.py tabel
+  171  pip uninstall telegram
+  172  python manage.py tabel
+  173  mcedit abcfuck/management/commands/tabel.py
+  174  python manage.py tabel --days=59
+  175  mcedit abcfuck/views.py
+  176  mcedit abcfuck/views.py
+  177  mcedit abcfuck/views.py
+  178  python manage.py tabel --days=59
+  179  python manage.py tabel --days=55
+  180  python manage.py tabel --days=51
+  181  python manage.py tabel --days=46
+  182  python manage.py tabel --days=44
+  183  python manage.py tabel --days=40
+  184  python manage.py tabel --days=36
+  185  python manage.py tabel --days=33
+  186  python manage.py tabel --days=31
+  187  python manage.py tabel --days=25
+  188  python manage.py tabel --days=23
+  189  python manage.py tabel --days=17
+  190  python manage.py tabel --days=15
+  191  python manage.py tabel --days=10
+  192  python manage.py tabel --days=7
+  193   python manage.py get_mssql_data --days=1 --device=5 --dep-id=47
+  194  crontab -e
+  195  crontab -e
+  196   python manage.py get_mssql_data --days=1 --device=6 --dep-id=47
+  197  crontab -e
+  198   python manage.py get_mssql_data --days=1 --device=6 --dep-id=53
+  199  crontab -e
+  200   python manage.py get_mssql_data --days=1 --device=5 --dep-id=53
+  201   python manage.py get_mssql_data --days=1 --device=5 --dep-id=55
+  202   python manage.py get_mssql_data --days=1 --device=6 --dep-id=55
+  203  crontab -e
+  204   python manage.py get_mssql_data --days=1 --device=6 --dep-id=57
+  205   python manage.py get_mssql_data --days=1 --device=5 --dep-id=57
+  206  crontab -e
+  207   python manage.py get_mssql_data --days=1 --device=5 --dep-id=60
+  208   python manage.py get_mssql_data --days=1 --device=6 --dep-id=60
+  209  crontab -e
+  210   python manage.py get_mssql_data --days=1 --device=6 --dep-id=58
+  211   python manage.py get_mssql_data --days=1 --device=5 --dep-id=58
+  212  crontab -e
+  213   python manage.py get_mssql_data --days=1 --device=5 --dep-id=63
+  214   python manage.py get_mssql_data --days=1 --device=6 --dep-id=63
+  215  crontab -e
+  216  python manage.py tabel --days=5
+  217  python manage.py tabel
+  218  crontab -e
+  219  python manage.py tabel
+  220  exit
+  221   python manage.py get_mssql_data --days=60 --device=6 --dep-id=63
+  222  cd fingers/
+  223   python manage.py get_mssql_data --days=60 --device=6 --dep-id=63
+  224   python manage.py get_mssql_data --days=60 --device=6 --dep-id=60
+  225   python manage.py get_mssql_data --days=60 --device=6 --dep-id=60
+  226  python manage.py tabel --days=56
+  227  python manage.py tabel --days=52
+  228  python manage.py tabel --days=47
+  229  python manage.py tabel --days=43
+  230  python manage.py tabel --days=41
+  231  python manage.py tabel --days=37
+  232  python manage.py tabel --days=32
+  233  python manage.py tabel --days=28
+  234  python manage.py tabel --days=27
+  235  python manage.py tabel --days=22
+  236  python manage.py tabel --days=18
+  237  python manage.py tabel --days=14
+  238  python manage.py tabel --days=11
+  239  python manage.py tabel --days=6
+  240  python manage.py tabel --days=3
+  241  python manage.py tabel --days=4
+  242  exit
+  243  cd fingers/
+  244   python manage.py get_mssql_data --days=60 --device=5 --dep-id=57
+  245   python manage.py get_mssql_data --days=60 --device=5 --dep-id=60
+  246   python manage.py get_mssql_data --days=60 --device=5 --dep-id=60
+  247  mcedit abcfuck/management/commands/get_mssql_data.py
+  248  ping i.ua
+  249  ping i.ua
+  250  mcedit abcfuck/management/commands/get_mssql_data.py
+  251  mcedit abcfuck/management/commands/get_mssql_data.py
+  252   python manage.py get_mssql_data --days=60 --device=5 --dep-id=60
+  253  python manage.py tabel --days=58
+  254  python manage.py tabel --days=54
+  255  python manage.py tabel --days=50
+  256  python manage.py tabel --days=48
+  257  python manage.py tabel --days=42
+  258  python manage.py tabel --days=41
+  259  python manage.py tabel --days=38
+  260  python manage.py tabel --days=35
+  261  python manage.py tabel --days=29
+  262  python manage.py tabel --days=26
+  263  python manage.py tabel --days=20
+  264  python manage.py tabel --days=19
+  265  python manage.py tabel --days=13
+  266  python manage.py tabel --days=12
+  267  python manage.py tabel --days=5
+  268  python manage.py tabel --days=4
+  269  python manage.py tabel --days=3
+  270  exit
+  271  ÐµÑÐ³Ñ ÑÐµ 
+  272  tmux at 
+  273  op a
+  274  ip a
+  275  htop
+  276  cd /home/fingers/
+  277  django-admin createsuperuser
+  278  mcedit /etc/apache2/sites-available/000-default.conf 
+  279  mcedit fingers/wsgi.py
+  280  history
+  281  history | grep user
+  282  python manage.py createsuperuser
+  283  exit
+  284  [18~
+  285  ifconfig
+  286  mc
+  287  cat /etc/mysql/debian.cnf 
+  288  mc
+  289  /etc/init.d/mysql restart
+  290  cat /etc/mysql/debian.cnf 
+  291  mc
+  292  history
+  293  mc
+  294  myqsl -u root
+  295  mysql -u root
+  296  mysql -u root -p
+  297  ifconfig
+  298  cd /home/fingers/
+  299  python manage.py tabel --days=0
+  300  ÑÑÑÐµ
+  301  exit
+  302  fingers 
+  303  mc
+  304  mc
+  305  cd /home/
+  306  ./count.sh
+  307  mc
+  308  cd fingers/
+  309  ./count.sh 
+  310  history 
+  311  crontab -u root -l
+  312  df -h
+  313  history
+  314  crontab -u root -l
+  315  mysql
+  316  mysql -u root
+  317  mysql -u root -p
+  318  crontab -u root -l
+  319  exit
+  320  mc
+  321  exit
+  322  mc
+  323  crontab -u root -l
+  324  history

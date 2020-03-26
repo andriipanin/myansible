@@ -1,0 +1,9 @@
+- name: copy vncbd.sql
+  template:
+     src: vncbd.sql.j2
+     dest: /home/vnc/vnc/vncbd.sql
+     
+- name: mysql vncbd < /home/vnc/vnc/vncbd.sql
+  shell: mysql vncbd < /home/vnc/vnc/vncbd.sql
+       
+     

@@ -1,0 +1,42 @@
+https://natenka.gitbooks.io/ansible-dlya-setevih-inzhenerov/content/book/1_ansible_basics/configuration.html
+
+
+
+
+ansible all -m ping
+SSH password: 
+10.0.12.12 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+10.0.13.100 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+
+bash-3.2# 
+bash-3.2# 
+bash-3.2# ansible pc-vlan14 -m ping
+SSH password: 
+10.0.13.100 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+bash-3.2# ansible pc-vlan15 -m ping
+SSH password: 
+10.0.12.12 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+
+=========
+ansible all -m raw -a "uname -a"
+SSH password: 
+10.0.13.100 | SUCCESS | rc=0 >>
+Linux comp-1-075 4.15.0-54-generic #58-Ubuntu SMP Mon Jun 24 10:55:24 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
+
+
+10.0.12.12 | SUCCESS | rc=0 >>
+Linux comp-1-006 4.15.0-54-generic #58-Ubuntu SMP Mon Jun 24 10:55:24 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
+
+===========

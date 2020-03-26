@@ -1,0 +1,20 @@
+---
+- name: copy code to server
+  debug: msg="copy code to server. reading from {{env_name}}"
+
+- name: Creates the index.php file
+  template: src=index.php.j2 dest={{document_root}}index.php
+
+- name: Copy the info.php file
+  template: src=info.php.j2 dest={{document_root}}info.php
+
+- name: Copy the test.php file
+  template: src=test.php.j2 dest={{document_root}}test.php
+
+
+- name: replace /etc/nginx/sites-available/default config file to enable PHP
+  template: src=default.j2 dest=/etc/nginx/sites-available/default
+
+
+
+

@@ -1,0 +1,9 @@
+[radius-server]
+#email.wholesalesdepot.com ansible_host=10.0.7.192 ansible_port=1213
+10.0.7.192
+
+#uncomment to use with ssh key
+#[radius-server:vars]
+#ansible_connection=ssh
+#ansible_user=root
+

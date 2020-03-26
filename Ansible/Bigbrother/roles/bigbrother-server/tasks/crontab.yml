@@ -1,0 +1,117 @@
+- name: add crontab job 1
+  cron:
+    name: "manage.py get_mssgl_data 1"
+    minute: "*/5"
+    job: "python /home/fingers/fingers/manage.py get_mssql_data --min=5 --device=5 --dep-id=47"
+    
+
+- name: add crontab job 2
+  cron:
+    name: "manage.py get_mssgl_data 2"
+    minute: "*/5"
+    job: "python /home/fingers/fingers/manage.py get_mssql_data --min=5 --device=6 --dep-id=47"
+
+- name: add crontab job 3
+  cron:
+    name: "manage.py get_mssgl_data 3"
+    minute: "*/5"
+    job: "python /home/fingers/fingers/manage.py get_mssql_data --min=5 --device=5 --dep-id=53"
+
+- name: add crontab job 4
+  cron:
+    name: "manage.py get_mssgl_data 4"
+    minute: "*/5"
+    job: "python /home/fingers/fingers/manage.py get_mssql_data --min=5 --device=6 --dep-id=53"
+
+- name: add crontab job 5
+  cron:
+    name: "manage.py get_mssgl_data 5"
+    minute: "*/5"
+    job: "python /home/fingers/fingers/manage.py get_mssql_data --min=5 --device=5 --dep-id=55"
+
+- name: add crontab job 6
+  cron:
+    name: "manage.py get_mssgl_data 6"
+    minute: "*/5"
+    job: "python /home/fingers/fingers/manage.py get_mssql_data --min=5 --device=6 --dep-id=55"
+
+- name: add crontab job 7
+  cron:
+    name: "manage.py get_mssgl_data 7"
+    minute: "*/5"
+    job: "python /home/fingers/fingers/manage.py get_mssql_data --min=5 --device=5 --dep-id=57"
+
+- name: add crontab job 8
+  cron:
+    name: "manage.py get_mssgl_data 8"
+    minute: "*/5"
+    job: "python /home/fingers/fingers/manage.py get_mssql_data --min=5 --device=6 --dep-id=57"
+
+- name: add crontab job 9
+  cron:
+    name: "manage.py get_mssgl_data 9"
+    minute: "*/5"
+    job: "python /home/fingers/fingers/manage.py get_mssql_data --min=5 --device=5 --dep-id=58"
+
+- name: add crontab job 10
+  cron:
+    name: "manage.py get_mssgl_data 10"
+    minute: "*/5"
+    job: "python /home/fingers/fingers/manage.py get_mssql_data --min=5 --device=6 --dep-id=58"
+
+- name: add crontab job 11
+  cron:
+    name: "manage.py get_mssgl_data 11"
+    minute: "*/5"
+    job: "python /home/fingers/fingers/manage.py get_mssql_data --min=5 --device=5 --dep-id=60"
+
+- name: add crontab job 12
+  cron:
+    name: "manage.py get_mssgl_data 12"
+    minute: "*/5"
+    job: "python /home/fingers/fingers/manage.py get_mssql_data --min=5 --device=6 --dep-id=60"
+
+- name: add crontab job 13
+  cron:
+    name: "manage.py get_mssgl_data 13"
+    minute: "*/5"
+    job: "python /home/fingers/fingers/manage.py get_mssql_data --min=5 --device=5 --dep-id=63"
+
+- name: add crontab job 14
+  cron:
+    name: "manage.py get_mssgl_data 14"
+    minute: "*/5"
+    job: "python /home/fingers/fingers/manage.py get_mssql_data --min=5 --device=6 --dep-id=63"
+
+
+- name: add crontab job 15
+  cron:
+    name: "manage.py tabel 15"
+    minute: "*/10"
+    job: "python /home/fingers/fingers/manage.py tabel"
+
+    
+    
+    
+
+
+
+#*/5 * * * * python /home/fingers/manage.py get_mssql_data --min=5 --device=5 --dep-id=47
+#*/5 * * * * python /home/fingers/manage.py get_mssql_data --min=5 --device=6 --dep-id=47
+#*/5 * * * * python /home/fingers/manage.py get_mssql_data --min=5 --device=5 --dep-id=53
+#*/5 * * * * python /home/fingers/manage.py get_mssql_data --min=5 --device=6 --dep-id=53
+#*/5 * * * * python /home/fingers/manage.py get_mssql_data --min=5 --device=5 --dep-id=55
+#*/5 * * * * python /home/fingers/manage.py get_mssql_data --min=5 --device=6 --dep-id=55
+#*/5 * * * * python /home/fingers/manage.py get_mssql_data --min=5 --device=5 --dep-id=57
+#*/5 * * * * python /home/fingers/manage.py get_mssql_data --min=5 --device=6 --dep-id=57
+#*/5 * * * * python /home/fingers/manage.py get_mssql_data --min=5 --device=5 --dep-id=58
+#*/5 * * * * python /home/fingers/manage.py get_mssql_data --min=5 --device=6 --dep-id=58
+#*/5 * * * * python /home/fingers/manage.py get_mssql_data --min=5 --device=5 --dep-id=60
+#*/5 * * * * python /home/fingers/manage.py get_mssql_data --min=5 --device=6 --dep-id=60
+#*/5 * * * * python /home/fingers/manage.py get_mssql_data --min=5 --device=5 --dep-id=63
+#*/5 * * * * python /home/fingers/manage.py get_mssql_data --min=5 --device=6 --dep-id=63
+#
+#*/10 * * * * python /home/fingers/manage.py tabel
+    
+    
+    

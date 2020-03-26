@@ -1,0 +1,27 @@
+---
+- name: Test
+  debug: msg="Устанавливаем Mail Server {{mail_server}}"
+  when: (mailflag == 'true') and (env_name == 'staging')
+
+#загружаем mailhog из депозитория
+- name: pull an image mailhog/mailhog
+  when: (mailflag == 'true') and (env_name == 'staging')
+  docker_image:
+     name: mailhog/mailhog
+     repository: mailhog/mailhog 
+     state: present
+
+
+
+#Запускаем контейнер mailhog
+- name: Run container
+  when: (mailflag == 'true') and (env_name == 'staging')
+  docker_container:
+      name: my-test-container
+      image: mailhog/mailhog
+      ports:
+      - "1025:1025" 
+      - "8025:8025"
+      state: started
+
+

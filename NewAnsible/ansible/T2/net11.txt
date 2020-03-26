@@ -1,0 +1,4 @@
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-12-12 11:28 EET
+Nmap scan report for 10.0.11.1
+Host is up (0.0077s latency).
+Nmap done: 256 IP addresses (1 host up) scanned in 36.35 seconds

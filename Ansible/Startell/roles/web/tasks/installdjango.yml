@@ -1,0 +1,8 @@
+- name: Install Django 1.11.4
+  pip: name=django version=1.11.4 state=present
+  
+ 
+#Error  
+#- name: Install MySQL-python
+#  pip: name=MySQL-python state=present
+    

@@ -1,0 +1,22 @@
+---
+- hosts: all
+  gather_facts: False
+  become: yes
+  #sudo: yes
+#  vars:
+#     installmotion: true
+
+  pre_tasks:
+    - debug: msg="reading from {{env_name}}"
+
+
+  roles:
+      - users_pc
+    # - webserver
+    # - mailserver
+
+  post_tasks:
+   - debug: msg="All done {{env_name}}"
+
+
+

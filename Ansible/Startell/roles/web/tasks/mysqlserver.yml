@@ -1,0 +1,43 @@
+#MYSQL Server install
+#- name: Set MySQL root password before installing
+#  debconf: name='mysql-server' question='mysql-server/root_password' value='{{mysql_root_pass | quote}}' vtype='password'
+    
+ 
+#- name: Confirm MySQL root password before installing
+#  debconf: name='mysql-server' question='mysql-server/root_password_again' value='{{mysql_root_pass | quote}}' vtype='password'
+
+
+- name: install mysql
+  apt: package={{ item }} state=present
+  when: ansible_os_family == 'Debian' 
+  with_items:
+    - mysql-server
+    - python-mysqldb
+
+    
+
+#- name: Update MySQL root password for all root accounts
+#  mysql_user: name=root host={{ item }} password={{ mysql_root_pass }} state=present
+#     - "{{ ansible_hostname }}"
+#     - 127.0.0.1
+#     - ::1
+#     - localhost
+
+
+
+#OK
+- name: Create a new database with name 'startells'
+  mysql_db:
+    name: startells
+    state: present
+    
+
+#OK
+- name: Create a user startells with password NisnJl%#<Lq$UzuU5Zzf
+  mysql_user:    
+     name: startells
+     password: NisnJl%#<Lq$UzuU5Zzf
+     #priv: 'startells.startells':ALL
+     priv: '*.*:ALL'
+     state: present
+     

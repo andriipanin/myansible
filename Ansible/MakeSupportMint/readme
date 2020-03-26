@@ -1,0 +1,45 @@
+
+
+export ANSIBLE_HOST_KEY_CHECKING=False
+
+Example
+ansible-playbook -i staging -u ivanov --ask-pass test.yml --ssh-common-args='-o StrictHostKeyChecking=no'
+
+
+https://linuxconfig.org/how-to-install-telegram-on-ubuntu-18-04-bionic-beaver-linux#h6-2-install-telegram-via-official-package
+install Telegram via Official package
+Alternatively, you can install the latest version of Telegram from the official Telegram source package. Open up terminal and enter:
+$ wget -O- https://telegram.org/dl/desktop/linux | sudo tar xJ -C /opt/
+$ sudo ln -s /opt/Telegram/Telegram /usr/local/bin/telegram-desktop
+
+
+
+apt install mc
+adduser support
+pasww
+passwd root
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+apt-get install google-chrome-stable 
+apt-get -y remove vino
+apt-get -y install x11vnc
+mkdir /etc/x11vnc
+x11vnc --storepasswd /etc/x11vnc/vncpwd
+mcedit /lib/systemd/system/x11vnc.service
+systemctl daemon-reload
+systemctl enable x11vnc.service
+apt-get update && apt-get install motion﻿
+apt-get install motio
+apt-get install motion
+mcedit /etc/motion/motion.conf
+mcedit /etc/default/motion
+cd /etc
+cd /default
+mc
+/etc/init.d/motion start﻿
+/etc/init.d/motion star
+/etc/init.d/motion start
+reboot
+apt install ssh
+
+
+

@@ -1,0 +1,11 @@
+---
+# tasks file for common-packages
+
+#Setup/install tasks
+- include: setup-RedHat.yml
+  when: ansible_os_family == 'RedHat'
+#  static: no
+  
+- include: setup-Debian.yml
+  when: ansible_os_family == 'Debian'
+    

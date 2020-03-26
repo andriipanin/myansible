@@ -1,0 +1,25 @@
+[all:vars]
+#ansible_sudo_pass=1qaz2wsx
+
+[server]
+#localhost   ansible_connection=local
+#test ansible for bigbrother  project
+10.0.7.215
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

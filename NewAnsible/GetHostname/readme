@@ -1,0 +1,12 @@
+
+
+ansible-playbook --diff --check mail-server.setup.yml \
+    -i hosts/production \
+    -e @./vault/vault.yml \
+    -e @./group_vars/live \
+    $@
+
+
+ansible-playbook -i staging -u ivanov --ask-pass test.yml
+
+ansible-playbook -i staging  --ask-pass test.yml

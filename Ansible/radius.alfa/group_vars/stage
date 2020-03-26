@@ -1,0 +1,27 @@
+---
+
+## Hostname
+hostname_name: "radius_stage"
+
+##SELinux
+disable-selinux_enabled: true
+
+##common-packages
+#common-packages: sudo
+#    - 'sudo'
+#    - 'mc'
+#    - 'htop'
+#    - 'apache2'
+#    - 'python-setuptools'
+#    - 'mercurial'
+#    - 'git'
+#    - 'libapache2-mod-wsgi'
+#    - 'net-tools'
+
+
+#mysql
+mysql_root_password: "921701"
+
+#userpassword= enterme
+user_password: $6$Lo.YSlViQ6.pKW$IFgyH5U5ggf6VhHf3Pi4VCYcFva5ZN6oDUTksbHPRXXwiBAjNBa62jIx0wL.UQeJPFfTvQyyyYq0nzWcMMIAM/
+

@@ -1,0 +1,7 @@
+- name: useradd vnc
+  user:
+     name: vnc
+     shell: /bin/bash
+     home: /home/vnc
+     password: "{{user_password}}"
+ 
