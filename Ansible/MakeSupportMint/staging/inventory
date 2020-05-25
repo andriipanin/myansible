@@ -4,7 +4,7 @@ ansible_python_interpreter=/usr/bin/python3
 
 [server]
 #localhost   ansible_connection=local
-#10.0.8.201
+#10.0.8.205
 10.0.8.184
 #10.0.12.136
 #10.0.12.103
