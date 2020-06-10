@@ -1,0 +1,17 @@
+---
+- name: Test
+  hosts: all
+  become: yes
+  
+  roles:
+     - { role: deploy_docker, when: ansible_system == 'Linux' }
+    
+  
+#  tasks:
+#    - name: Ping Host
+#      ping:
+#      
+#    - name: Check and print LINUX Version
+#      debug: var=ansible_os_family
+  
+      

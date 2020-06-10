@@ -1,0 +1,17 @@
+ansible-inventory --list
+ansible-inventory --graph
+
+ansible all -m ping
+ansible all -m setup
+nsible all -m shell -a "uptime"
+
+ansible all -m copy -a "src=test.txt dest=/home"
+ansible all -m copy -a "src=test.txt dest=/home" -b
+-b = sudo
+
+ansible all -m shell -a "ls -l /home"
+
+ansible all -m file -a "path=/home/test.txt state=absent"
+
+
+ansible-playbook playbook.yaml

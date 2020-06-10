@@ -1,0 +1,9 @@
+---
+  - name: Install WEB
+    hosts: all
+
+    tasks:
+      - name: install apapche
+        apt: 
+           name: apache2
+           state: present    

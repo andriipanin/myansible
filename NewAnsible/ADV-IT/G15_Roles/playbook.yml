@@ -1,0 +1,14 @@
+---
+
+- name: Test Connections
+  hosts: all
+  become: yes
+
+#  tasks:
+#  - name: Ping my server
+#    ping:
+
+  roles:
+    - { role: deploy_web, when: ansible_system == 'Linux' }
+    
+...       

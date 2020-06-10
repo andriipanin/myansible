@@ -1,0 +1,5 @@
+---
+# vars file for deploy_web
+destin_folder : /var/www/jtest
+destin_folder_img: /var/www/jtest/img/
+

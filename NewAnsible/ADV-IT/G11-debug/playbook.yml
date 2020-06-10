@@ -22,4 +22,4 @@
        register: results
        
      - debug:
-         msg: "uptimr is {{ results.stdout }}"            
+         msg: "uptime is {{ results.stdout }}"            

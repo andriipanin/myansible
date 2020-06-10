@@ -1,0 +1,5 @@
+[servers]
+prometheus_server ansible_host=10.0.7.191 ansible_user=root ansible_ssh_private_key_file=/Users/andrey/.ssh/id_rsa
+
+
+[prod]

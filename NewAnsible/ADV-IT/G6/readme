@@ -1,1 +1,5 @@
 ansible-inventory --list
+ansible-inventory --graph
+
+ansiblle -m ping
+ansible-playbook playbook.yaml

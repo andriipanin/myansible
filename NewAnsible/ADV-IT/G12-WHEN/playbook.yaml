@@ -1,0 +1,13 @@
+---
+- name: Test
+  hosts: all
+  become: yes
+  
+  tasks:
+    - name: Ping Host
+      ping:
+      
+    - name: Check and print LINUX Version
+      debug: var=ansible_os_family
+  
+      

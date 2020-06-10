@@ -1,0 +1,31 @@
+---
+# tasks file for deploy_web
+- block: # ========== Block for redhat===========
+  - name: Install Apache Web Server for RedHat
+    yum: name=httpd state=latest
+  - name: Start Web Server service for RedHeat    
+    service: name=httpd state=started enabled=yes
+  when: ansible_os_family == "RedHat"
+  
+- block: #========== Block for ubuntu ===========
+  - name: Install Apache Web Server for Debian
+    apt: name=apache2 state=latest
+  - name: Start Web Server service for Apache
+    service: name=apache2 state=started enabled=yes
+  when: ansible_os_family == "Debian"
+  
+- name: Ganarate Index.html
+  template: src=index.j2 dest={{ destin_folder }}/index.html mode=0555
+  
+- name: Copy file to web Server
+  copy: src={{ item }} dest={{ destin_folder_img }} mode=0555
+  loop:
+    - "fl.jpg"
+    - "girl.jpg"
+  notify:
+    - Restart Apache RedHat
+    - Restart Apache Debian
+    
+          
+  
+  
