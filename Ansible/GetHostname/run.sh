@@ -1,3 +1,3 @@
 #!/bin/bash
 
-ansible-playbook -i staging -u ivanov --ask-pass test.yml
+ansible-playbook -i staging -u ivanov --ask-pass --ask-vault-pass test.yml

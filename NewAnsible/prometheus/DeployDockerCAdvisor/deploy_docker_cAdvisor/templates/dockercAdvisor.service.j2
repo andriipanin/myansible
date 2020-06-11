@@ -1,0 +1,13 @@
+[Unit]
+Description=cAdvisor stack
+Requires=docker.service
+After=docker.service
+
+[Service]
+Restart=always
+WorkingDirectory=/root/cAdvisor
+ExecStart=docker-compose -f docker-compose.yml up
+ExecStop=docker-compose -f docker-compose.yml down
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,21 @@
+---
+# tasks file for deploy_docker_cAdvisor
+- name: ping test
+  ping:
+  
+- name: create docker-compose.yml from template
+  template: 
+    src: docker-compose.yml.j2
+    dest: /root/cAdvisor/docker-compose.yml
+
+- name: create file /etc/systemd/system/dockercAdvisor.service
+  template:
+     src: dockercAdvisor.service.j2
+     dest: /etc/systemd/system/dockercAdvisor.service
+     
+- name: Start and Enable Service dockercAdviser.service
+  service:
+     name: dockercAdvisor
+     state: started
+     enabled: yes
+               

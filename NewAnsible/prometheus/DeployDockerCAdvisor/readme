@@ -1,0 +1,55 @@
+docker and docker-compose must be installed
+
+
+===========
+root@dockertest ~/cAdvisor # cat docker-compose.yaml
+version: '2'
+services:
+    cadvisor-exporter:
+        container_name: "cadvisor-exporter"
+        image: google/cadvisor
+        ports:
+          - "9200:8080"
+        volumes:
+          - "/:/rootfs:ro"
+          - "/var/run:/var/run:rw"
+          - "/sys:/sys:ro"
+          - "/var/lib/docker/:/var/lib/docker:ro"
+        restart: unless-stopped
+
+
+
+====
+
+
+
+write a service
+create file
+/etc/systemd/system/dockercAdvisor.service
+
+
+->>
+[Unit]
+Description=cAdvisor stack
+Requires=docker.service
+After=docker.service
+
+[Service]
+Restart=always
+WorkingDirectory=/root/cAdvisor
+ExecStart=/usr/local/bin/docker-compose -f docker-compose.yml up
+ExecStop=/usr/local/bin/docker-compose -f docker-compose.yml down
+
+[Install]
+WantedBy=multi-user.target
+
+
+<--
+
+
+systemctl enable dockercAdvisor.service
+
+
+systemctl status dockercAdvisormkdir.service
+
+
