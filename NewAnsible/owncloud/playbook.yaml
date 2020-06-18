@@ -1,0 +1,17 @@
+---
+- name: Deploy OwnCloud Service
+  hosts: dev
+  become: yes
+  
+  roles:
+     - { role: deploy_owncloud, when: ansible_system == 'Linux' }
+    
+  
+#  tasks:
+#    - name: Ping Host
+#      ping:
+#      
+#    - name: Check and print LINUX Version
+#      debug: var=ansible_os_family
+  
+      

@@ -1,0 +1,153 @@
+---
+# tasks file for deploy_owncloud
+
+- name: Run the equivalent of "apt-get update" as a separate step
+  apt:
+    update_cache: yes
+    
+- name: Update all packages to the latest version
+  apt:
+    upgrade: full
+    
+- name: Install a list of packages sudo apt install apache2 mariadb-server mariadb-client
+  apt:
+    pkg:
+    - apache2
+    - mariadb-server
+    - mariadb-client
+
+- name: Add an Apt PHP signing key, uses whichever key is at the URL
+  apt_key:
+#    url: https://dl-ssl.google.com/linux/linux_signing_key.pub
+    url: https://packages.sury.org/php/apt.gpg
+    state: present
+  
+- name: Add the PHP repository
+  #shell: "sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'"
+#  apt_repository: repo="deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" state="present"
+  # echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list
+  apt_repository: repo="deb https://packages.sury.org/php/ {{ansible_distribution_release}} main" state="present"
+  
+- name: Apt Update
+  apt: update_cache=yes
+  
+#
+#php7.2-mbstring-dbgsym' for regex 'php7.2-mb'
+#Note, selecting 'php7.2-mbstring' for r
+
+ 
+- name: install php7.2 sudo apt install php7.2 libapache2-mod-php7.2 php7.2-{mysql,intl,curl,json,gd,xml,mbstring-dbgsym,mbstring,zip}
+  apt:
+    pkg: 
+    - php7.2
+    - libapache2-mod-php7.3
+    - php7.2-mysql
+    - php7.2-intl
+    - php7.2-curl
+    - php7.2-json
+    - php7.2-gd
+    - php7.2-xml
+    - php7.2-mb*
+    - php7.2-zip
+   
+  
+#===============================================      
+
+- name: Enable service apache2, and not touch the state
+  service:
+    name: apache2
+    enabled: yes 
+    
+
+#================== MySQL section
+
+- name: Install needed module
+  apt:
+    name: python-mysqldb
+    state: present
+    
+    
+- name: Create a new database with name 'ownclowd'
+  mysql_db:
+    name: owncloud
+    login_unix_socket: /var/run/mysqld/mysqld.sock
+    state: present
+
+- name: Create database user with password and all database privileges and 'WITH GRANT OPTION'
+  mysql_user:
+    login_unix_socket: /var/run/mysqld/mysqld.sock
+    name: owncloud_user
+    password: enterme
+    priv: 'owncloud.*:ALL,GRANT'
+    state: present
+    
+    
+#========================== Install OwnCloud ====================
+- name: apt-get install curl gnupg
+  apt:
+    pkg:
+    - curl
+    - gnupg
+    
+- name: Add an Apt signing key, uses whichever key is at the URL
+  apt_key:
+    url: https://download.owncloud.org/download/repositories/10.2.1/Debian_9.0/Release.key
+    state: present     
+
+
+# Add specified repository into sources list using specified filename.
+- name: Add owncloud repo
+  apt_repository:
+    repo: deb http://download.owncloud.org/download/repositories/10.4.1/general/Debian_10/ /
+    state: present
+    filename: owncloud
+
+- name: apt Update
+  apt:
+    update_cache: yes
+    
+- name: apt install owncloud-files
+  apt:
+    name: owncloud-files
+    state: present    
+    
+- name: chown -R www-data:www-data /var/www/owncloud/
+  file:
+    path: /var/www/owncloud/
+    owner: www-data
+    group: www-data
+    
+
+- name: Template a file to /etc/apache2/sites-available/owncloud.conf
+  template:
+    src: owncloud.conf.j2
+    dest: /etc/apache2/sites-available/owncloud.conf
+
+- name: a2ensite owncloud
+  command: a2ensite owncloud
+  
+- name: a2enmod rewrite headers env dir mime unique_id (LOOP LIST)
+  apache2_module:
+    name: "{{ item }}"
+  with_items:
+    - rewrite
+    - headers
+    - env
+    - dir
+    - mime
+    - unique_id
+  notify:
+    - restart apache2
+
+
+- name: apt-get install certbot python-certbot-apache    
+  apt:
+    pkg:
+    - certbot
+    - python-certbot-apache
+
+- name: certbot --webroot -w /var/www/owncloud/ -d domain.name certonly
+  shell: certbot --webroot -w /var/www/owncloud/ -d {{ domain_name }} certonly -m admin@iks.net.ua --agree-tos -n
+  
+  
+  
