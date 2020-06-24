@@ -73,12 +73,34 @@
 
 
 #============== OK install Telegram 
+- name: Print Version
+  debug:
+    msg: Version is {{ ansible_distribution_version }}
 
-- name: install snap for Telegram
-  apt: name=snapd
+- name: Install telegram manualy
+  block:
+    - name: install snap for Telegram
+      apt: name=snapd
   
-- name: install Telegram via  snap
-  shell: "snap install telegram-desktop"
+    - name: install Telegram via  snap
+      shell: "snap install telegram-desktop"
+         
+  when: ansible_facts['distribution_version'] is version('20', '<')
+
+
+#https://linuxconfig.org/how-to-install-telegram-on-ubuntu-18-04-bionic-beaver-linux
+- name: Install telegram  manualy for Linux Mint 20
+  block:
+    - name: wget -O- https://telegram.org/dl/desktop/linux | sudo tar xJ -C /opt/
+      shell: wget -O- https://telegram.org/dl/desktop/linux | sudo tar xJ -C /opt/
+      ignore_errors: true
+      
+    - name: ln -s /opt/Telegram/Telegram /usr/local/bin/telegram-desktop
+      shell: ln -s /opt/Telegram/Telegram /usr/local/bin/telegram-desktop
+      ignore_errors: true
+      
+  when: ansible_facts['distribution_version'] is version('20', '>=')
+    
 #=======================================   
 
 
