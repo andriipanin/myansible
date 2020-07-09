@@ -1,0 +1,19 @@
+---
+- name: Test
+  hosts: all
+#  become: yes
+  gather_facts: no
+  
+  roles:
+     - routeros
+#     - { role: routeros, when: ansible_system == 'Linux' }
+    
+  
+#  tasks:
+#    - name: Ping Host
+#      ping:
+#      
+#    - name: Check and print LINUX Version
+#      debug: var=ansible_os_family
+  
+      

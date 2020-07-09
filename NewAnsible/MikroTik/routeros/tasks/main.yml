@@ -1,0 +1,12 @@
+---
+# tasks file for routeros
+- name: run command on remote devices
+  routeros_command:
+    commands: /system resource print
+  register: resource_output
+  
+- name: Display resource_output
+  debug:
+     var: resource_output
+           
+    
