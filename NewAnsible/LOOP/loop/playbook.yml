@@ -1,0 +1,41 @@
+- hosts: localhost
+  gather_facts: false
+  vars:
+    my_files:
+      - /etc/passwd
+      - /etc/group
+      
+    mydata:
+      - Mercedes
+      - BMW
+      - AUDI
+      - Ford
+      - Toyota
+      - Nassan
+          
+
+  tasks:
+    - name: MapReduce
+      debug:
+#        msg: "{{ my_files | map('basename') | list | join(',')}}"
+#        msg: "{{ mydata | sort | list }}"
+        msg: "{{ item }}"
+      loop: 
+        - A
+        - B
+        - C
+        - D
+      loop_control:
+        pause: 3
+            
+        
+        
+    - name: count our fruit
+      debug:
+        msg: "{{ item }} with index {{ my_idx }}"
+      loop:
+        - apple
+        - banana
+        - pear
+      loop_control:
+        index_var: my_idx

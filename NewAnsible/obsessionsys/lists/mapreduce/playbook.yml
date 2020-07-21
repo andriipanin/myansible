@@ -1,0 +1,17 @@
+---
+- hosts: localhost
+  tasks:
+    - name: print interfaces
+      debug:
+#        msg: "{{ ansible_interfaces }}"
+        msg: "{{ ansible_all_ipv4_addresses }}" 
+
+#    - name: Display all interfaces
+#      debug:
+#        msg: "{{ msg.split('\n') }}"
+#      vars:
+#        msg: |
+#          {% for iface in ansible_interfaces|sort %}
+#              System interface {{ iface }}
+#              {{ vars.ansible_facts[iface] | to_nice_json }}
+#          {% endfor %}

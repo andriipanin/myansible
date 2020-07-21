@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: localhost
   gather_facts: yes
   tasks:
 #    - name: debug1
@@ -8,6 +8,17 @@
 #      debug: msg="Hello2"
     - name: Get Host
       debug: msg={{ansible_hostname}}
-        
+
+    - name: Sending an e-mail using Gmail SMTP servers
+      mail:
+        host: mail.smscoin.com
+        port: 25
+        username: apanin@smscoin.com
+        password: y9YOQlWb
+        to: Andrii Panin  <apanin@smscoin.com>
+        from: apanin@smscoin.com 
+        subject: Ansible-report
+        body: System {{ ansible_hostname }} has been successfully provisioned.
+      delegate_to: localhost         
       
     
