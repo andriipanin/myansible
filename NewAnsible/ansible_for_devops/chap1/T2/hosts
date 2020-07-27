@@ -1,0 +1,15 @@
+[servers]
+10.0.9.65
+10.0.9.141
+10.0.9.202
+10.0.9.206
+10.0.9.214
+10.0.9.240
+10.0.9.247
+
+
+[servers:vars]
+ansible_ssh_user=ivanov
+ansible_ssh_pass=1qaz2wsx
+ntp_server=ntp.atlanta.example.com
+proxy=proxy.atlanta.example.com

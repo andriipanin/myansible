@@ -4,7 +4,7 @@
     - name: print interfaces
       debug:
 #        msg: "{{ ansible_interfaces }}"
-        msg: "{{ ansible_all_ipv4_addresses }}" 
+        msg: "{{ ansible_fqdn }}" 
 
 #    - name: Display all interfaces
 #      debug:

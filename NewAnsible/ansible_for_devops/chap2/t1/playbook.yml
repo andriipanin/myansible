@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: Say Hello
+    debug:
+      msg: "Hello"
+#  - name: Ensure NTP installed
+#    yum: name=ntp state=present
+#  - name: Ensure NTP running
+#    service: name=ntpd state=started enabled=yes

@@ -1,0 +1,1 @@
+ansible -i hosts all -a "lsb_release -a"

@@ -1,0 +1,7 @@
+ad-hog ansible
+
+
+ansible -i hosts test -m ping -u andrey
+ansible -i hosts test1 -m ping -u andrey --ask-pass
+
+ansible -i hosts all -m ping -u andrey

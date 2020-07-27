@@ -5,7 +5,7 @@
 #    - var1: hello
   vars_files:
     - vault/secrets.yml    
-  remote_user: ivanov
+  remote_user: support
   become: yes
   gather_facts: True
 

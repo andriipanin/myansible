@@ -1,0 +1,14 @@
+vagrant box add geerling/centos7
+vagrant init geerling/centos7
+
+vagrant up
+vagrant halt
+vagrant destroy
+
+
+#Provisioning configuration for ansible 
+
+conf.vm.provision "ansible" do | ansible |
+  ansible.playbook = "playbook.yml"
+end
+  
