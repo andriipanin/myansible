@@ -1,0 +1,25 @@
+---
+#- name: Get IP
+#  debug: msg={{ansible_default_ipv4}}
+  
+#- name: Get Host
+#  debug: msg={{ansible_hostname}}  
+  
+- name: Inxi -F
+  shell: "inxi -F"    
+  register: myoutput
+  
+- set_fact: 
+    psk={{ myoutput.stdout_lines }}  
+  
+  
+- name: Print info
+  debug:
+    msg: |
+       Hostname is {{ ansible_hostname }}
+       Serial is {{ psk }}
+  
+  
+  
+  
+  

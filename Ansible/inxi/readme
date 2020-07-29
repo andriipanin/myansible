@@ -1,0 +1,4 @@
+nmap -sP 10.0.9.0/24 > net9.txt
+
+
+ansible-playbook -i staging -u ivanov --ask-pass test.yml

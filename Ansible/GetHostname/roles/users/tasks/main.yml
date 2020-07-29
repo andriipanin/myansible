@@ -5,6 +5,39 @@
 - name: Get Host
   debug: msg={{ansible_hostname}}  
   
+- name: Get Serial Number
+  shell: "dmidecode -s system-serial-number"    
+  register: myoutput1
+  
+- name: cat /proc/cpuinfo | grep "model name" | head -n 1
+  shell: "cat /proc/cpuinfo | grep 'model name' | head -n 1"
+  register: myoutput2
+  
+- name: cat /proc/meminfo | grep "MemTotal"
+  shell: "cat /proc/meminfo | grep 'MemTotal'"
+  register: myoutput3 
+   
+  
+  
+- set_fact: 
+    serialnm={{ myoutput1.stdout }}  
+
+- set_fact:
+    cpuinfo={{ myoutput2.stdout }}
+        
+- set_fact:
+    memory={{ myoutput3.stdout }}  
+  
+- name: Print
+  debug:
+    msg: 
+       - Hostname is {{ ansible_hostname }}
+       - Serial is {{ serialnm }}
+       - Cpu is {{ cpuinfo }}
+       - Memory {{ memory }}
+       
+       
+  
   
   
   
