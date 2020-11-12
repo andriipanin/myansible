@@ -1,0 +1,18 @@
+mysql install
+
+https://www.digitalocean.com/community/tutorials/how-to-install-the-latest-mysql-on-debian-10
+
+https://dev.mysql.com/downloads/repo/apt/
+
+apt update
+apt install gnupg
+
+cd /tmp
+#wget https://dev.mysql.com/get/mysql-apt-config_0.8.13-1_all.deb
+wget https://dev.mysql.com/get/mysql-apt-config_0.8.16-1_all.deb
+
+
+dpkg -i mysql-apt-config_0.8.16-1_all.deb
+
+apt-get update
+apt install mysql-server

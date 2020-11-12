@@ -1,0 +1,5 @@
+---
+# tasks file for gethostname
+- name: Get Host
+  debug: msg={{ansible_hostname}}
+  

@@ -1,0 +1,21 @@
+---
+- hosts: server #can be all
+  vars:
+#     - mysql_apt_config: mysql-apt-config_0.8.16-1_all.deb
+#    - vhost: 91.201.240.129
+#    - var1: hello
+#  vars_files:
+#    - secret.yml
+#  remote_user: ivanov
+  gather_facts: True
+#  pre_tasks:
+#    - name: Updating yum cache
+#      yum:
+#         name: "*"
+#         update_cache: yes
+#      when: ansible_os_family == "RedHat"
+
+  roles:
+    - role: gethostname
+    - role: mysql
+
