@@ -1,0 +1,25 @@
+---
+# tasks file for httpd_install
+#wget https://apache.paket.ua/httpd/httpd-2.4.46.tar.gz
+- name: wget https://apache.paket.ua/httpd/{{ httpd_pkg }}
+  get_url:
+    url: https://apache.paket.ua/httpd/{{ httpd_pkg }}
+    dest: /usr/src/{{ httpd_pkg }}
+#    mode: '0440'
+
+
+- name: Extract {{ httpd_pkg }} into /usr/src/
+  unarchive:
+    src: /usr/src/{{ httpd_pkg }}
+    dest: /usr/src/
+    remote_src: yes
+
+- name: Build httpd with ./configure && make && make install
+  shell: "{{ item }}"
+  args:
+    chdir: "/usr/src/{{ httpd_dir }}/"
+  with_items:
+    - ./configure
+    - make
+    - make install
+    - ldconfig

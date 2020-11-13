@@ -1,0 +1,13 @@
+https://www.php.net/manual/ru/install.unix.apache2.php
+
+
+httpd.conf
+
+<IfModule dir_module>
+    DirectoryIndex index.php index.html
+</IfModule>
+
+
+<FilesMatch \.php$>
+    SetHandler application/x-httpd-php
+</FilesMatch>

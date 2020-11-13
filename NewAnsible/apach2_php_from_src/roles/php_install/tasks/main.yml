@@ -1,0 +1,25 @@
+---
+# tasks file for php_install
+#wget wget https://www.php.net/distributions/php-7.4.12.tar.gz
+- name: wget https://www.php.net/distributions/{{ php_pkg }}
+  get_url:
+    url: https://www.php.net/distributions/{{ php_pkg }}
+    dest: /usr/src/{{ php_pkg }}
+#    mode: '0440'
+
+
+- name: Extract {{ php_pkg }} into /usr/src/
+  unarchive:
+    src: /usr/src/{{ php_pkg }}
+    dest: /usr/src/
+    remote_src: yes
+
+- name: Build php with ./configure && make && make install
+  shell: "{{ item }}"
+  args:
+    chdir: "/usr/src/{{ php_dir }}/"
+  with_items:
+    - ./configure --with-apxs2=/usr/local/apache2/bin/apxs --with-mysqli
+    - make
+    - make install
+    - ldconfig

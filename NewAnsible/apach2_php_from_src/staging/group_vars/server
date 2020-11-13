@@ -1,0 +1,9 @@
+env_name: staging
+
+mail_server: 77.121.13.1
+mail_to: andy@romb.net
+mail_from: andy2@romb.net
+
+mailflag: true
+
+#mysql_apt_config: mysql-apt-config_0.8.16-1_all.deb

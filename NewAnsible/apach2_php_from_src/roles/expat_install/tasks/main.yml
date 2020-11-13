@@ -1,0 +1,23 @@
+---
+# tasks file for expat_install
+#https://github.com/libexpat/libexpat/releases/download/R_2_2_10/expat-2.2.10.tar.gz
+- name: wget https://github.com/libexpat/libexpat/releases/download/R_2_2_10/{{ expat_pkg }}
+  get_url:
+    url: https://github.com/libexpat/libexpat/releases/download/R_2_2_10/{{ expat_pkg }}
+    dest: /usr/src/{{ expat_pkg }}
+
+- name: Extract {{ expat_pkg }}
+  unarchive:
+    src: /usr/src/{{ expat_pkg }}
+    dest: /usr/src/
+    remote_src: yes
+
+- name: Build expart with ./configure && make && make install
+  shell: "{{ item }}"
+  args:
+    chdir: "/usr/src/{{ expat_dir}}/"
+  with_items:
+    - ./configure
+    - make
+    - make install
+    - ldconfig

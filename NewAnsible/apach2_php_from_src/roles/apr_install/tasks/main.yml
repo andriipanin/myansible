@@ -1,0 +1,27 @@
+---
+# tasks file for apr_install
+#----------------------------
+
+
+#https://apache.ip-connect.vn.ua//apr/apr-1.7.0.tar.gz
+- name: wget https://apache.ip-connect.vn.ua//apr/{{ apr_pkg }}
+  get_url:
+    url: https://apache.ip-connect.vn.ua//apr/{{ apr_pkg }}
+    dest: /usr/src/{{ apr_pkg }}
+
+- name: Extract {{ apr_pkg }} into /usr/src/
+  unarchive:
+    src: /usr/src/{{ apr_pkg }}
+    dest: /usr/src/
+    remote_src: yes
+
+- name: Build apr with ./configure && make && make install
+  shell: "{{ item }}"
+  args:
+    chdir: "/usr/src/{{ apr_dir}}/"
+  with_items:
+    - ./configure
+    - make
+    - make install
+    - ldconfig
+

@@ -1,0 +1,24 @@
+---
+# tasks file for pcre_install
+
+#https://ftp.pcre.org/pub/pcre/pcre-8.44.tar.gz
+- name: https://ftp.pcre.org/pub/pcre/{{ pcre_pkg }}
+  get_url:
+    url: https://ftp.pcre.org/pub/pcre/{{ pcre_pkg }}
+    dest: /usr/src/{{ pcre_pkg }}
+
+- name: Extract {{ pcre_pkg }}
+  unarchive:
+    src: /usr/src/{{ pcre_pkg }}
+    dest: /usr/src/
+    remote_src: yes
+
+- name: Build pcre with ./configure && make && make install
+  shell: "{{ item }}"
+  args:
+    chdir: "/usr/src/{{ pcre_dir}}/"
+  with_items:
+    - ./configure
+    - make
+    - make install
+    - ldconfig

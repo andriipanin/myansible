@@ -1,0 +1,134 @@
+---
+#httpd_pkg : httpd-2.4.46.tar.gz
+
+#wget https://apache.paket.ua/httpd/httpd-2.4.46.tar.gz
+- name: wget https://apache.paket.ua/httpd/{{ httpd_pkg }}
+  get_url:
+    url: https://apache.paket.ua/httpd/{{ httpd_pkg }}
+    dest: /usr/src/{{ httpd_pkg }}
+#    mode: '0440'
+
+
+- name: Extract {{ httpd_pkg }} into /usr/src/
+  unarchive:
+    src: /usr/src/{{ httpd_pkg }}
+    dest: /usr/src/
+    remote_src: yes
+
+#https://apache.ip-connect.vn.ua//apr/apr-1.7.0.tar.gz
+#- name: wget https://apache.ip-connect.vn.ua//apr/{{ apr_pkg }}
+#  get_url:
+#    url: https://apache.ip-connect.vn.ua//apr/{{ apr_pkg }}
+#    dest: /usr/src/{{ apr_pkg }}
+#
+#- name: Extract {{ apr_pkg }} into /usr/src/
+#  unarchive:
+#    src: /usr/src/{{ apr_pkg }}
+#    dest: /usr/src/
+#    remote_src: yes
+
+
+#//https://apache.ip-connect.vn.ua//apr/apr-util-1.6.1.tar.gz
+#- name: wget https://apache.ip-connect.vn.ua//apr/{{ apr_util_pkg }}
+#  get_url:
+#    url: https://apache.ip-connect.vn.ua//apr/{{ apr_util_pkg }}
+#    dest: /usr/src/{{ apr_util_pkg }}
+#
+#- name: Extract {{ apr_util_pkg }}
+#  unarchive:
+#    src: /usr/src/{{ apr_util_pkg }}
+#    dest: /usr/src/
+#    remote_src: yes
+
+
+
+
+#- name: Build apr with ./configure && make && make install
+#  shell: "{{ item }}"
+#  args:
+#    chdir: "/usr/src/apr-1.7.0/"
+#  with_items:
+#    - ./configure
+#    - make
+#    - make install
+#    - ldconfig
+
+
+#- name: Build apr-util with ./configure && make && make install
+#  shell: "{{ item }}"
+#  args:
+#    chdir: "/usr/src/apr-util-1.6.1/"
+#  with_items:
+#    - ./configure --with-apr=/usr/local/apr/bin/
+#    - make
+#    - make install
+#    - ldconfig
+
+#- name: Build - name: Build httpd with ./configure && make && make install
+#  shell: "{{ item }}"
+#  args:
+#    chdir: "/usr/src/httpd-2.4.46/"
+#  with_items:
+#    - ./configure
+#    - make
+#    - make install
+#    - ldconfig
+
+
+
+
+#- name: Running ./configure for apr
+#  command: '"{{ item }}" chdir=/usr/src/apr-1.7.0/'
+#  with_items:
+#    - ./configure
+#
+#- name: Running "make" for apr
+#  command: '"{{ item }}" chdir=/usr/src/apr-1.7.0'
+#  with_items:
+#    - make
+#
+#- name: Running "make install" for apr
+#  command: '{{ item }} chdir=/usr/src/apr-1.7.0/'
+#  with_items:
+#    - "make install"
+#
+#
+#- name: Running ./configure for apr-util-1.6.1
+#  command: '"{{ item }}" chdir=/usr/src/apr-util-1.6.1/'
+#  with_items:
+#    - "./configure --with-apr=/usr/local/apr/bin/"
+
+#- name: Running "make" for apr-util-1.6.1
+#  command: '"{{ item }}" chdir=/usr/src/apr-util-1.6.1/'
+#  with_items:
+#    - make
+#
+#- name: Running "make install" for apr-util-1.6.1
+#  command: '"{{ item }}" chdir=/usr/src/apr-util-1.6.1/'
+#  with_items:
+#    - "make install"
+#
+#
+#
+#- name: Running ./configure for httpd
+#  command: '"{{ item }}" chdir=/usr/src/httpd-2.4.46/'
+#  with_items:
+#    - "./configure"
+
+#- name: Running "make" for httpd
+#  command: '"{{ item }}" chdir=/usr/src/httpd-2.4.46/'
+#  with_items:
+#    - make
+#
+#- name: Running "make install" for httpd
+#  command: '""{{ item }}"" chdir=/usr/src/httpd-2.4.46/'
+#  with_items:
+#    - "make install"
+#
+
+
+
+
+
+
+

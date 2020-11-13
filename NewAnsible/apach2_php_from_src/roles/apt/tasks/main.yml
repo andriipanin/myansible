@@ -1,0 +1,17 @@
+---
+# tasks file for apt
+- name: apt-get update
+  apt:
+    update_cache: yes
+
+- name: Install a list of pkgs build-essential libxml2-dev pkg-config sqlite3 libsqlite3-dev zlib1g-dev
+  apt:
+     pkg:
+       - build-essential
+       - libxml2-dev
+       - pkg-config
+       - sqlite3
+       - libsqlite3-dev
+       - zlib1g-dev
+
+

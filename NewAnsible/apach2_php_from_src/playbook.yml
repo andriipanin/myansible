@@ -1,0 +1,44 @@
+---
+- hosts: server #can be all
+  vars:
+     - httpd_pkg: httpd-2.4.46.tar.gz
+     - httpd_dir: httpd-2.4.46
+     - apr_pkg: apr-1.7.0.tar.gz
+     - apr_dir: apr-1.7.0
+     - apr_util_pkg: apr-util-1.6.1.tar.gz
+     - apr_util_dir: apr-util-1.6.1
+     - expat_pkg: expat-2.2.10.tar.gz
+     - expat_dir: expat-2.2.10
+     - pcre_pkg: pcre-8.44.tar.gz
+     - pcre_dir: pcre-8.44
+     - php_pkg: php-7.4.12.tar.gz
+     - php_dir: php-7.4.12
+
+
+#     - mysql_apt_config: mysql-apt-config_0.8.16-1_all.deb
+#    - vhost: 91.201.240.129
+#    - var1: hello
+#  vars_files:
+#    - secret.yml
+#  remote_user: ivanov
+  gather_facts: True
+#  pre_tasks:
+#    - name: Updating yum cache
+#      yum:
+#         name: "*"
+#         update_cache: yes
+#      when: ansible_os_family == "RedHat"
+
+  roles:
+    - role: gethostname
+    - role: apt
+    - role: expat_install
+    - role: apr_install
+    - role: apr_util_install
+#    - role: expat_install
+    - role: pcre_install
+    - role: httpd_install
+    - role: php_install
+
+
+

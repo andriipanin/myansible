@@ -1,0 +1,24 @@
+---
+# tasks file for apr_util_install
+
+#//https://apache.ip-connect.vn.ua//apr/apr-util-1.6.1.tar.gz
+- name: wget https://apache.ip-connect.vn.ua//apr/{{ apr_util_pkg }}
+  get_url:
+    url: https://apache.ip-connect.vn.ua//apr/{{ apr_util_pkg }}
+    dest: /usr/src/{{ apr_util_pkg }}
+
+- name: Extract {{ apr_util_pkg }}
+  unarchive:
+    src: /usr/src/{{ apr_util_pkg }}
+    dest: /usr/src/
+    remote_src: yes
+
+- name: Build apr-util with ./configure && make && make install
+  shell: "{{ item }}"
+  args:
+    chdir: "/usr/src/{{ apr_util_dir }}/"
+  with_items:
+    - ./configure --with-apr=/usr/local/apr/bin/
+    - make
+    - make install
+    - ldconfig
