@@ -1,0 +1,9 @@
+
+
+#use valt
+https://otus.ru/nest/post/232/
+
+
+#change editor
+env EDITOR=nano ansible-vault edit secret-file.cfg
+

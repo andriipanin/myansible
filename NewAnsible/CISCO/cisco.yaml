@@ -3,7 +3,9 @@
   hosts: servers
   gather_facts: false
   connection: local
-  
+  vars_files:
+    - vars.yml
+
   tasks:
     - name: display the runnning config
       ios_command: 
@@ -13,6 +15,6 @@
     - name: save output to file
       copy:
         content: "{{ config.stdout[0] }}" 
-        dest: "show_run_{{ inventory_hostname }}.txt"
+        dest: "show_run_{{ inventory_hostname }}.cfg"
 
 

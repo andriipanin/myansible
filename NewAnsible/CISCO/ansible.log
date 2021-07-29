@@ -167,3 +167,21 @@ for more information.
 2021-07-28 16:17:53,167 p=18040 u=root n=ansible | PLAY RECAP **************************************************************************
 2021-07-28 16:17:53,168 p=18040 u=root n=ansible | 193.142.159.4              : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 2021-07-28 16:17:53,267 p=18053 u=root n=ansible | shutdown complete
+2021-07-29 13:52:02,164 p=20768 u=root n=ansible | ERROR! vars.yml exists, please use 'edit' instead
+2021-07-29 14:00:19,573 p=21124 u=root n=ansible | ERROR! Attempting to decrypt but no vault secrets found
+2021-07-29 14:01:04,984 p=21161 u=root n=ansible | PLAY [Automatic backup Cisco Nexus] *************************************************************************************************************************
+2021-07-29 14:01:05,237 p=21161 u=root n=ansible | TASK [display the runnning config] **************************************************************************************************************************
+2021-07-29 14:01:08,236 p=21172 u=root n=ansible | network_os is set to ios
+2021-07-29 14:01:16,805 p=21178 u=root n=p=21178 u=root | paramiko [193.142.159.4] | Connected (version 2.0, client OpenSSH_7.2)
+2021-07-29 14:01:17,177 p=21178 u=root n=p=21178 u=root | paramiko [193.142.159.4] | Auth banner: User Access Verification
+
+2021-07-29 14:01:17,178 p=21178 u=root n=p=21178 u=root | paramiko [193.142.159.4] | Authentication (password) successful!
+2021-07-29 14:01:22,522 p=21161 u=root n=ansible | [WARNING]: Platform linux on host 193.142.159.4 is using the discovered Python interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change this. See https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
+
+2021-07-29 14:01:22,523 p=21161 u=root n=ansible | ok: [193.142.159.4]
+2021-07-29 14:01:22,570 p=21161 u=root n=ansible | TASK [save output to file] **********************************************************************************************************************************
+2021-07-29 14:01:24,667 p=21161 u=root n=ansible | changed: [193.142.159.4]
+2021-07-29 14:01:24,738 p=21161 u=root n=ansible | PLAY RECAP **************************************************************************************************************************************************
+2021-07-29 14:01:24,739 p=21161 u=root n=ansible | 193.142.159.4              : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-07-29 14:01:24,836 p=21178 u=root n=ansible | shutdown complete
