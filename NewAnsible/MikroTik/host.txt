@@ -1,5 +1,5 @@
 [servers]
-MikroTik_server  ansible_host=194.117.252.4 
+MikroTik_server  ansible_host=194.117.252.20
 
 
 [prod]

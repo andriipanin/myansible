@@ -1,0 +1,169 @@
+2021-07-28 15:54:33,941 p=16384 u=root n=ansible | ERROR! 'task' is not a valid attribute for a Play
+
+The error appears to be in '/home/andy/myansible/NewAnsible/CISCO/cisco.yaml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- name: Automatic backup Cisco Nexus
+  ^ here
+
+2021-07-28 15:56:18,219 p=16514 u=root n=ansible | ERROR! 'task' is not a valid attribute for a Play
+
+The error appears to be in '/home/andy/myansible/NewAnsible/CISCO/cisco.yaml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- name: Automatic backup Cisco Nexus
+  ^ here
+
+2021-07-28 15:56:50,577 p=16564 u=root n=ansible | PLAY [Automatic backup Cisco Nexus] *************************************************
+2021-07-28 15:56:50,954 p=16564 u=root n=ansible | TASK [display the runnning config] **************************************************
+2021-07-28 15:56:52,616 p=16571 u=root n=ansible | network_os is set to ios
+2021-07-28 15:56:54,294 p=16564 u=root n=ansible | [WARNING]: Platform linux on host Nexus3000 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html
+for more information.
+
+2021-07-28 15:56:54,295 p=16564 u=root n=ansible | fatal: [Nexus3000]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Unsupported parameters for (ios_command) module: register Supported parameters include: auth_pass, authorize, commands, host, interval, match, password, port, provider, retries, ssh_keyfile, timeout, username, wait_for"}
+2021-07-28 15:56:54,298 p=16564 u=root n=ansible | PLAY RECAP **************************************************************************
+2021-07-28 15:56:54,298 p=16564 u=root n=ansible | Nexus3000                  : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-07-28 15:56:54,397 p=16577 u=root n=ansible | shutdown complete
+2021-07-28 15:59:39,842 p=16694 u=root n=ansible | PLAY [Automatic backup Cisco Nexus] *************************************************
+2021-07-28 15:59:39,964 p=16694 u=root n=ansible | TASK [display the runnning config] **************************************************
+2021-07-28 15:59:41,091 p=16704 u=root n=ansible | network_os is set to ios
+2021-07-28 15:59:42,601 p=16694 u=root n=ansible | fatal: [Nexus3000]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Unsupported parameters for (ios_command) module: register Supported parameters include: auth_pass, authorize, commands, host, interval, match, password, port, provider, retries, ssh_keyfile, timeout, username, wait_for"}
+2021-07-28 15:59:42,609 p=16694 u=root n=ansible | PLAY RECAP **************************************************************************
+2021-07-28 15:59:42,610 p=16694 u=root n=ansible | Nexus3000                  : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-07-28 15:59:42,708 p=16710 u=root n=ansible | shutdown complete
+2021-07-28 16:02:31,943 p=16867 u=root n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: Nexus3000
+
+2021-07-28 16:02:31,946 p=16867 u=root n=ansible | PLAY [Automatic backup Cisco Nexus] *************************************************
+2021-07-28 16:02:31,947 p=16867 u=root n=ansible | skipping: no hosts matched
+2021-07-28 16:02:31,947 p=16867 u=root n=ansible | PLAY RECAP **************************************************************************
+2021-07-28 16:03:21,040 p=16930 u=root n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: Servers
+
+2021-07-28 16:03:21,043 p=16930 u=root n=ansible | PLAY [Automatic backup Cisco Nexus] *************************************************
+2021-07-28 16:03:21,044 p=16930 u=root n=ansible | skipping: no hosts matched
+2021-07-28 16:03:21,044 p=16930 u=root n=ansible | PLAY RECAP **************************************************************************
+2021-07-28 16:03:39,976 p=16967 u=root n=ansible | PLAY [Automatic backup Cisco Nexus] *************************************************
+2021-07-28 16:03:40,317 p=16967 u=root n=ansible | TASK [display the runnning config] **************************************************
+2021-07-28 16:03:41,818 p=16974 u=root n=ansible | network_os is set to ios
+2021-07-28 16:03:43,397 p=16967 u=root n=ansible | fatal: [Nexus3000=andy]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Unsupported parameters for (ios_command) module: register Supported parameters include: auth_pass, authorize, commands, host, interval, match, password, port, provider, retries, ssh_keyfile, timeout, username, wait_for"}
+2021-07-28 16:03:43,410 p=16967 u=root n=ansible | PLAY RECAP **************************************************************************
+2021-07-28 16:03:43,410 p=16967 u=root n=ansible | Nexus3000=andy             : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-07-28 16:03:43,504 p=16980 u=root n=ansible | shutdown complete
+2021-07-28 16:05:43,789 p=17083 u=root n=ansible | PLAY [Automatic backup Cisco Nexus] *************************************************
+2021-07-28 16:05:44,129 p=17083 u=root n=ansible | TASK [display the runnning config] **************************************************
+2021-07-28 16:05:45,345 p=17091 u=root n=ansible | network_os is set to ios
+2021-07-28 16:05:46,478 p=17083 u=root n=ansible | fatal: [Nexus3000]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Unsupported parameters for (ios_command) module: register Supported parameters include: auth_pass, authorize, commands, host, interval, match, password, port, provider, retries, ssh_keyfile, timeout, username, wait_for"}
+2021-07-28 16:05:46,484 p=17083 u=root n=ansible | PLAY RECAP **************************************************************************
+2021-07-28 16:05:46,485 p=17083 u=root n=ansible | Nexus3000                  : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-07-28 16:05:46,581 p=17097 u=root n=ansible | shutdown complete
+2021-07-28 16:09:10,615 p=17315 u=root n=ansible | PLAY [Automatic backup Cisco Nexus] *************************************************
+2021-07-28 16:09:10,641 p=17315 u=root n=ansible | TASK [display the runnning config] **************************************************
+2021-07-28 16:09:11,768 p=17322 u=root n=ansible | network_os is set to ios
+2021-07-28 16:09:13,364 p=17315 u=root n=ansible | fatal: [193.142.159.4]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Unsupported parameters for (ios_command) module: register Supported parameters include: auth_pass, authorize, commands, host, interval, match, password, port, provider, retries, ssh_keyfile, timeout, username, wait_for"}
+2021-07-28 16:09:13,367 p=17315 u=root n=ansible | PLAY RECAP **************************************************************************
+2021-07-28 16:09:13,368 p=17315 u=root n=ansible | 193.142.159.4              : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-07-28 16:09:13,467 p=17328 u=root n=ansible | shutdown complete
+2021-07-28 16:10:27,088 p=17416 u=root n=ansible | PLAY [Automatic backup Cisco Nexus] *************************************************
+2021-07-28 16:10:27,117 p=17416 u=root n=ansible | TASK [display the runnning config] **************************************************
+2021-07-28 16:10:28,305 p=17423 u=root n=ansible | network_os is set to ios
+2021-07-28 16:10:29,384 p=17416 u=root n=ansible | fatal: [193.142.159.4]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Unsupported parameters for (ios_command) module: register Supported parameters include: auth_pass, authorize, commands, host, interval, match, password, port, provider, retries, ssh_keyfile, timeout, username, wait_for"}
+2021-07-28 16:10:29,391 p=17416 u=root n=ansible | PLAY RECAP **************************************************************************
+2021-07-28 16:10:29,391 p=17416 u=root n=ansible | 193.142.159.4              : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-07-28 16:10:29,490 p=17429 u=root n=ansible | shutdown complete
+2021-07-28 16:11:54,035 p=17513 u=root n=ansible | PLAY [Automatic backup Cisco Nexus] *************************************************
+2021-07-28 16:11:54,062 p=17513 u=root n=ansible | TASK [display the runnning config] **************************************************
+2021-07-28 16:11:55,200 p=17521 u=root n=ansible | network_os is set to ios
+2021-07-28 16:11:56,298 p=17513 u=root n=ansible | [WARNING]: Platform linux on host 193.142.159.4 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html
+for more information.
+
+2021-07-28 16:11:56,299 p=17513 u=root n=ansible | fatal: [193.142.159.4]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python"}, "changed": false, "msg": "Unsupported parameters for (ios_command) module: register Supported parameters include: auth_pass, authorize, commands, host, interval, match, password, port, provider, retries, ssh_keyfile, timeout, username, wait_for"}
+2021-07-28 16:11:56,304 p=17513 u=root n=ansible | PLAY RECAP **************************************************************************
+2021-07-28 16:11:56,305 p=17513 u=root n=ansible | 193.142.159.4              : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-07-28 16:11:56,401 p=17528 u=root n=ansible | shutdown complete
+2021-07-28 16:12:41,956 p=17598 u=root n=ansible | PLAY [Automatic backup Cisco Nexus] *************************************************
+2021-07-28 16:12:41,983 p=17598 u=root n=ansible | TASK [display the runnning config] **************************************************
+2021-07-28 16:12:43,105 p=17605 u=root n=ansible | network_os is set to ios
+2021-07-28 16:12:44,528 p=17611 u=root n=p=17611 u=root | paramiko [193.142.159.4] | Connected (version 2.0, client OpenSSH_7.2)
+2021-07-28 16:12:44,848 p=17611 u=root n=p=17611 u=root | paramiko [193.142.159.4] | Auth banner: User Access Verification
+
+2021-07-28 16:12:44,849 p=17611 u=root n=p=17611 u=root | paramiko [193.142.159.4] | Authentication (password) successful!
+2021-07-28 16:12:51,584 p=17598 u=root n=ansible | [WARNING]: Platform linux on host 193.142.159.4 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html
+for more information.
+
+2021-07-28 16:12:51,584 p=17598 u=root n=ansible | ok: [193.142.159.4]
+2021-07-28 16:12:51,622 p=17598 u=root n=ansible | TASK [save output to file] **********************************************************
+2021-07-28 16:12:53,527 p=17598 u=root n=ansible | changed: [193.142.159.4]
+2021-07-28 16:12:53,597 p=17598 u=root n=ansible | PLAY RECAP **************************************************************************
+2021-07-28 16:12:53,599 p=17598 u=root n=ansible | 193.142.159.4              : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-07-28 16:12:53,696 p=17611 u=root n=ansible | shutdown complete
+2021-07-28 16:13:57,704 p=17727 u=root n=ansible | PLAY [Automatic backup Cisco Nexus] *************************************************
+2021-07-28 16:13:57,731 p=17727 u=root n=ansible | TASK [display the runnning config] **************************************************
+2021-07-28 16:13:58,861 p=17736 u=root n=ansible | network_os is set to ios
+2021-07-28 16:14:00,273 p=17744 u=root n=p=17744 u=root | paramiko [193.142.159.4] | Connected (version 2.0, client OpenSSH_7.2)
+2021-07-28 16:14:00,610 p=17744 u=root n=p=17744 u=root | paramiko [193.142.159.4] | Auth banner: User Access Verification
+
+2021-07-28 16:14:00,611 p=17744 u=root n=p=17744 u=root | paramiko [193.142.159.4] | Authentication (password) successful!
+2021-07-28 16:14:06,117 p=17727 u=root n=ansible | [WARNING]: Platform linux on host 193.142.159.4 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html
+for more information.
+
+2021-07-28 16:14:06,117 p=17727 u=root n=ansible | ok: [193.142.159.4]
+2021-07-28 16:14:06,136 p=17727 u=root n=ansible | TASK [save output to file] **********************************************************
+2021-07-28 16:14:07,931 p=17727 u=root n=ansible | changed: [193.142.159.4]
+2021-07-28 16:14:07,969 p=17727 u=root n=ansible | PLAY RECAP **************************************************************************
+2021-07-28 16:14:07,970 p=17727 u=root n=ansible | 193.142.159.4              : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-07-28 16:14:08,067 p=17744 u=root n=ansible | shutdown complete
+2021-07-28 16:16:15,969 p=17892 u=root n=ansible | PLAY [Automatic backup Cisco Nexus] *************************************************
+2021-07-28 16:16:15,995 p=17892 u=root n=ansible | TASK [display the runnning config] **************************************************
+2021-07-28 16:16:17,134 p=17903 u=root n=ansible | network_os is set to ios
+2021-07-28 16:16:18,545 p=17909 u=root n=p=17909 u=root | paramiko [193.142.159.4] | Connected (version 2.0, client OpenSSH_7.2)
+2021-07-28 16:16:18,868 p=17909 u=root n=p=17909 u=root | paramiko [193.142.159.4] | Auth banner: User Access Verification
+
+2021-07-28 16:16:18,869 p=17909 u=root n=p=17909 u=root | paramiko [193.142.159.4] | Authentication (password) successful!
+2021-07-28 16:16:24,166 p=17892 u=root n=ansible | [WARNING]: Platform linux on host 193.142.159.4 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html
+for more information.
+
+2021-07-28 16:16:24,167 p=17892 u=root n=ansible | ok: [193.142.159.4]
+2021-07-28 16:16:24,186 p=17892 u=root n=ansible | TASK [save output to file] **********************************************************
+2021-07-28 16:16:25,923 p=17892 u=root n=ansible | changed: [193.142.159.4]
+2021-07-28 16:16:26,043 p=17892 u=root n=ansible | PLAY RECAP **************************************************************************
+2021-07-28 16:16:26,044 p=17892 u=root n=ansible | 193.142.159.4              : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-07-28 16:16:26,141 p=17909 u=root n=ansible | shutdown complete
+2021-07-28 16:17:42,757 p=18040 u=root n=ansible | PLAY [Automatic backup Cisco Nexus] *************************************************
+2021-07-28 16:17:42,784 p=18040 u=root n=ansible | TASK [display the runnning config] **************************************************
+2021-07-28 16:17:43,910 p=18047 u=root n=ansible | network_os is set to ios
+2021-07-28 16:17:45,372 p=18053 u=root n=p=18053 u=root | paramiko [193.142.159.4] | Connected (version 2.0, client OpenSSH_7.2)
+2021-07-28 16:17:45,698 p=18053 u=root n=p=18053 u=root | paramiko [193.142.159.4] | Auth banner: User Access Verification
+
+2021-07-28 16:17:45,699 p=18053 u=root n=p=18053 u=root | paramiko [193.142.159.4] | Authentication (password) successful!
+2021-07-28 16:17:51,027 p=18040 u=root n=ansible | [WARNING]: Platform linux on host 193.142.159.4 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html
+for more information.
+
+2021-07-28 16:17:51,027 p=18040 u=root n=ansible | ok: [193.142.159.4]
+2021-07-28 16:17:51,204 p=18040 u=root n=ansible | TASK [save output to file] **********************************************************
+2021-07-28 16:17:53,146 p=18040 u=root n=ansible | changed: [193.142.159.4]
+2021-07-28 16:17:53,167 p=18040 u=root n=ansible | PLAY RECAP **************************************************************************
+2021-07-28 16:17:53,168 p=18040 u=root n=ansible | 193.142.159.4              : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-07-28 16:17:53,267 p=18053 u=root n=ansible | shutdown complete
