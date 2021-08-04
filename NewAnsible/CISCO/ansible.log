@@ -185,3 +185,20 @@ interpreter could change this. See https://docs.ansible.com/ansible/2.9/referenc
 2021-07-29 14:01:24,738 p=21161 u=root n=ansible | PLAY RECAP **************************************************************************************************************************************************
 2021-07-29 14:01:24,739 p=21161 u=root n=ansible | 193.142.159.4              : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 2021-07-29 14:01:24,836 p=21178 u=root n=ansible | shutdown complete
+2021-07-29 14:07:23,234 p=21539 u=root n=ansible | ERROR! the playbook: cisci.yaml could not be found
+2021-07-29 14:07:39,420 p=21560 u=root n=ansible | PLAY [Automatic backup Cisco Nexus] *************************************************************************************************************************
+2021-07-29 14:07:39,905 p=21560 u=root n=ansible | TASK [display the runnning config] **************************************************************************************************************************
+2021-07-29 14:07:41,199 p=21568 u=root n=ansible | network_os is set to ios
+2021-07-29 14:07:42,599 p=21574 u=root n=p=21574 u=root | paramiko [193.142.159.4] | Connected (version 2.0, client OpenSSH_7.2)
+2021-07-29 14:07:42,933 p=21574 u=root n=p=21574 u=root | paramiko [193.142.159.4] | Auth banner: User Access Verification
+
+2021-07-29 14:07:42,933 p=21574 u=root n=p=21574 u=root | paramiko [193.142.159.4] | Authentication (password) successful!
+2021-07-29 14:07:50,571 p=21560 u=root n=ansible | [WARNING]: Platform linux on host 193.142.159.4 is using the discovered Python interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change this. See https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
+
+2021-07-29 14:07:50,572 p=21560 u=root n=ansible | ok: [193.142.159.4]
+2021-07-29 14:07:50,590 p=21560 u=root n=ansible | TASK [save output to file] **********************************************************************************************************************************
+2021-07-29 14:07:52,360 p=21560 u=root n=ansible | changed: [193.142.159.4]
+2021-07-29 14:07:52,431 p=21560 u=root n=ansible | PLAY RECAP **************************************************************************************************************************************************
+2021-07-29 14:07:52,432 p=21560 u=root n=ansible | 193.142.159.4              : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-07-29 14:07:52,529 p=21574 u=root n=ansible | shutdown complete
