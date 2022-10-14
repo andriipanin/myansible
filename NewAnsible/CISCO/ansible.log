@@ -202,3 +202,19 @@ interpreter could change this. See https://docs.ansible.com/ansible/2.9/referenc
 2021-07-29 14:07:52,431 p=21560 u=root n=ansible | PLAY RECAP **************************************************************************************************************************************************
 2021-07-29 14:07:52,432 p=21560 u=root n=ansible | 193.142.159.4              : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 2021-07-29 14:07:52,529 p=21574 u=root n=ansible | shutdown complete
+2022-10-14 11:26:54,677 p=12414 u=root n=ansible | PLAY [Automatic backup Cisco Nexus] *********************************************************************************************************************************************************************************************************
+2022-10-14 11:26:54,935 p=12414 u=root n=ansible | TASK [display the runnning config] **********************************************************************************************************************************************************************************************************
+2022-10-14 11:26:57,594 p=12429 u=root n=ansible | network_os is set to ios
+2022-10-14 11:26:59,656 p=12438 u=root n=p=12438 u=root | paramiko [193.142.159.4] | Connected (version 2.0, client OpenSSH_7.2)
+2022-10-14 11:26:59,984 p=12438 u=root n=p=12438 u=root | paramiko [193.142.159.4] | Auth banner: User Access Verification
+
+2022-10-14 11:26:59,985 p=12438 u=root n=p=12438 u=root | paramiko [193.142.159.4] | Authentication (password) successful!
+2022-10-14 11:27:05,485 p=12414 u=root n=ansible | [WARNING]: Platform linux on host 193.142.159.4 is using the discovered Python interpreter at /usr/bin/python, but future installation of another Python interpreter could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
+
+2022-10-14 11:27:05,486 p=12414 u=root n=ansible | ok: [193.142.159.4]
+2022-10-14 11:27:05,530 p=12414 u=root n=ansible | TASK [save output to file] ******************************************************************************************************************************************************************************************************************
+2022-10-14 11:27:07,496 p=12414 u=root n=ansible | changed: [193.142.159.4]
+2022-10-14 11:27:07,617 p=12414 u=root n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************************************
+2022-10-14 11:27:07,618 p=12414 u=root n=ansible | 193.142.159.4              : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-10-14 11:27:07,715 p=12438 u=root n=ansible | shutdown complete

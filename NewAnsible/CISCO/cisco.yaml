@@ -10,7 +10,7 @@
     - name: display the runnning config
       ios_command: 
         commands: 
-         - show version
+         - show run
       register: config
     - name: save output to file
       copy:
